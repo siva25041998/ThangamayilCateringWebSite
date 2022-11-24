@@ -1,7 +1,46 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/futura\ medium\ bt.ttf');
+  }
+  @font-face {
+    font-family: 'proxima';
+    src: url('../fonts/Proxima\ Nova\ Black.ttf');
+  }
+  @font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../fonts/ProximaNova-Regular.otf');
+  }
+:root{
+    // --font-family-futura : var('Futura');
+    // --font-family-proxima : var('proxima');
+    --font-size-large : 50px;
+    --color-primary : #FF9F0D;
+    --color-dark-black : #484848;
+    --color-light-black : #717171;
+    --body-font-proxima: 'proxima';
+    --body-font-proxima-regular: 'ProximaNova-Regular';
+    --body-font-futura: 'proxima';
+}
+
 body{
     margin: 0 auto;
 }
 
 h1{
-    color: red;
+    color: var(--color-primary);
+    font-size: var(--font-size-large);
+    font-family:var(--body-font-proxima-regular);
 }
+
+h2{
+    color: var(--color-dark-black);
+    font-size: var(--font-size-large);
+    font-family:var(--body-font-proxima-regular);
+}
+
+h3{
+    color: var(--color-light-black);
+    font-size: var(--font-size-large);
+    font-family:var(--body-font-proxima-regular);
+}
+
