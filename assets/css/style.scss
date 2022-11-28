@@ -1,46 +1,99 @@
 @font-face {
     font-family: 'Futura';
     src: url('../fonts/futura\ medium\ bt.ttf');
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: 'proxima';
     src: url('../fonts/Proxima\ Nova\ Black.ttf');
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: 'ProximaNova-Regular';
     src: url('../fonts/ProximaNova-Regular.otf');
-  }
-:root{
-    // --font-family-futura : var('Futura');
-    // --font-family-proxima : var('proxima');
-    --font-size-large : 50px;
-    --color-primary : #FF9F0D;
-    --color-dark-black : #484848;
-    --color-light-black : #717171;
+}
+
+:root {
+    // --font-family-futura: var('Futura');
+    // --font-family-proxima: var('proxima');
+    // defined colors
+    --color-primary: #FF9F0D;
+    --color-dark-black: #484848;
+    --color-light-black: #717171;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    // defined font sizes
+    // --font-size-large: 50px;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    // defined font families
     --body-font-proxima: 'proxima';
     --body-font-proxima-regular: 'ProximaNova-Regular';
     --body-font-futura: 'proxima';
+    // defined font weights
+    --font-medium: 500;
+    --font-semi-bold: 600 //defined margins
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    --m-3: 3rem;
 }
 
-body{
+body {
     margin: 0 auto;
 }
 
-h1{
-    color: var(--color-primary);
-    font-size: var(--font-size-large);
-    font-family:var(--body-font-proxima-regular);
+ul {
+    list-style: none;
 }
 
-h2{
-    color: var(--color-dark-black);
-    font-size: var(--font-size-large);
-    font-family:var(--body-font-proxima-regular);
+a {
+    text-decoration: none;
 }
 
-h3{
-    color: var(--color-light-black);
-    font-size: var(--font-size-large);
-    font-family:var(--body-font-proxima-regular);
+a:active {
+    text-decoration: none;
 }
 
+.nav-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.header {
+    .nav {
+        max-width: 968px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .grid {
+            // display: grid;
+            gap: 1.5rem;
+        }
+        .nav_menu {
+            .nav_list {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                .nav-item {
+                    .nav_link {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: var(--smaller-font-size);
+                        color: var(--color-black);
+                    }
+                }
+            }
+        }
+    }
+}
