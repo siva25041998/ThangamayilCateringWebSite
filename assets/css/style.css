@@ -26,6 +26,7 @@
   --body-font-proxima: "proxima";
   --body-font-proxima-regular: "ProximaNova-Regular";
   --body-font-futura: "proxima";
+  --font-normal:400;
   --font-medium: 500;
   --font-semi-bold: 600 //defined margins
   --m-0-25: .25rem;
@@ -36,13 +37,16 @@
   --m-2: 2rem;
   --m-2-5: 2.5rem;
   --m-3: 3rem;
+  --br-0-2: 0.2rem;
+  --br-1-0: 1rem;
+  --br-1-5: 1.5rem;
 }
 
 body {
   margin: 0 auto;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -59,24 +63,42 @@ a:active {
   height: 32px;
 }
 
-.header .nav {
-  max-width: 968px;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.blob {
+  background: url("../img/blobs/angular-blobs.svg");
+  background-repeat: no-repeat;
+  background-position: 588px 0;
+  background-size: 1100px 750px;
 }
-.header .nav .grid {
-  gap: 1.5rem;
+
+.container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left {
+  margin-left: auto;
+  margin-right: 250px;
 }
-.header .nav .nav_menu .nav_list {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.header .nav .nav_menu .nav_list .nav-item .nav_link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--smaller-font-size);
+.container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left .nav-item .nav-link {
+  font-size: var(--normal-font-size);
   color: var(--color-black);
+  font-family: var(--body-font-proxima-regular);
+  font-weight: var(--font-normal);
+}
+.container-fluid .container .home .home-intro {
+  font-size: var(--big-font-size);
+  font-family: var(--body-font-proxima);
+  color: var(--color-light-black);
+}
+.container-fluid .container .home .home-food .home-food-image {
+  width: 600px;
+  height: 600px;
+}
+.container-fluid .container .home .home-description {
+  font-size: var(--normal-font-size);
+  color: var(--color-light-black);
+}
+.container-fluid .container .home .home-contact {
+  background-color: var(--color-primary);
+  padding: 10px 24px;
+  border-radius: var(--br-1-5);
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--body-font-futura);
+  font-size: var(--smaller-font-size);
 }/*# sourceMappingURL=style.css.map */
