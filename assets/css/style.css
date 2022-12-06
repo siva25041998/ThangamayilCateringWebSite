@@ -71,6 +71,13 @@ a:active {
   background-size: 1100px 750px;
 }
 
+.about-blob {
+  background: url("../img/blobs/about-blob.svg");
+  background-repeat: no-repeat;
+  background-position: -550px 0px;
+  background-size: 1100px 750px;
+}
+
 .container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left {
   margin-left: auto;
   margin-right: 250px;
@@ -117,4 +124,36 @@ a:active {
   font-size: var(--smaller-font-size);
   color: var(--color-dark-black);
   font-family: var(--body-font-proxima);
+}
+.container-fluid .container .about .about-name {
+  font-size: var(--h3-font-size);
+  font-family: var(--body-font-futura);
+  color: var(--color-primary);
+}
+.container-fluid .container .about .about-intro {
+  font-size: var(--h2-font-size);
+  font-family: var(--body-font-proxima);
+  color: var(--color-light-black);
+}
+.container-fluid .container .about .about-food .about-food-image {
+  width: 600px;
+  height: 600px;
+}
+.container-fluid .container .about .about-description {
+  font-size: var(--normal-font-size);
+  color: var(--color-light-black);
+}
+.container-fluid .container .about .more {
+  background-color: var(--color-primary);
+  border-radius: var(--br-1-5);
+  text-decoration: none;
+  color: var(--color-white);
+}
+.container-fluid .container .about .video {
+  text-decoration: none;
+  color: var(--color-light-black);
+}
+.container-fluid .container .about .video .icon {
+  color: var(--color-black);
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */

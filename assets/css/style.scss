@@ -81,6 +81,13 @@ a:active {
     background-size: 1100px 750px;
 }
 
+.about-blob {
+    background: url('../img/blobs/about-blob.svg');
+    background-repeat: no-repeat;
+    background-position: -550px 0px;
+    background-size: 1100px 750px;
+}
+
 .container-fluid {
     .container {
         .top-blob {
@@ -144,6 +151,42 @@ a:active {
                 font-size: var(--smaller-font-size);
                 color: var(--color-dark-black);
                 font-family: var(--body-font-proxima);
+            }
+        }
+        .about {
+            .about-name {
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-futura);
+                color: var(--color-primary);
+            }
+            .about-intro {
+                font-size: var(--h2-font-size);
+                font-family: var(--body-font-proxima);
+                color: var(--color-light-black);
+            }
+            .about-food {
+                .about-food-image {
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+            .about-description {
+                font-size: var(--normal-font-size);
+                color: var(--color-light-black);
+            }
+            .more {
+                background-color: var(--color-primary);
+                border-radius: var(--br-1-5);
+                text-decoration: none;
+                color: var(--color-white);
+            }
+            .video {
+                .icon {
+                    color: var(--color-black);
+                    font-size: 32px;
+                }
+                text-decoration: none;
+                color: var(--color-light-black);
             }
         }
     }
