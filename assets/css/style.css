@@ -70,12 +70,24 @@ a:active {
   background-position: 588px 0;
   background-size: 1100px 750px;
 }
+@media screen and (max-width: 568px) {
+  .blob {
+    background-position: 30px 0;
+    background-size: 350px 250px;
+  }
+}
 
 .about-blob {
   background: url("../img/blobs/about-blob.svg");
   background-repeat: no-repeat;
   background-position: -550px 0px;
   background-size: 1100px 750px;
+}
+@media screen and (max-width: 568px) {
+  .about-blob {
+    background-position: -170px 38px;
+    background-size: 409px 271px;
+  }
 }
 
 .container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left {
@@ -93,13 +105,29 @@ a:active {
   font-family: var(--body-font-proxima);
   color: var(--color-light-black);
 }
+@media screen and (max-width: 568px) {
+  .container-fluid .container .home .home-intro {
+    font-size: var(--h2-font-size);
+  }
+}
 .container-fluid .container .home .home-food .home-food-image {
   width: 600px;
   height: 600px;
 }
+@media screen and (max-width: 568px) {
+  .container-fluid .container .home .home-food .home-food-image {
+    width: 300px;
+    height: 300px;
+  }
+}
 .container-fluid .container .home .home-description {
   font-size: var(--normal-font-size);
   color: var(--color-light-black);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .home .home-description {
+    font-size: var(--small-font-size);
+  }
 }
 .container-fluid .container .home .home-contact {
   background-color: var(--color-primary);
@@ -138,6 +166,12 @@ a:active {
 .container-fluid .container .about .about-food .about-food-image {
   width: 600px;
   height: 600px;
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .about .about-food .about-food-image {
+    width: 270px;
+    height: 270px;
+  }
 }
 .container-fluid .container .about .about-description {
   font-size: var(--normal-font-size);

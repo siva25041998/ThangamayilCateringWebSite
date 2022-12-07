@@ -79,6 +79,10 @@ a:active {
     background-repeat: no-repeat;
     background-position: 588px 0;
     background-size: 1100px 750px;
+    @media screen and (max-width: 568px) {
+        background-position: 30px 0;
+        background-size: 350px 250px;
+    }
 }
 
 .about-blob {
@@ -86,6 +90,10 @@ a:active {
     background-repeat: no-repeat;
     background-position: -550px 0px;
     background-size: 1100px 750px;
+    @media screen and (max-width: 568px) {
+        background-position: -170px 38px;
+        background-size: 409px 271px;
+    }
 }
 
 .container-fluid {
@@ -110,21 +118,37 @@ a:active {
                 }
             }
         }
+        // .snack-bar {
+        //     display: none;
+        //     @media screen and (max-width: 568px) {
+        //         display: inline;
+        //     }
+        // }
         .home {
             .home-intro {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-proxima);
                 color: var(--color-light-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
             }
             .home-food {
                 .home-food-image {
                     width: 600px;
                     height: 600px;
+                    @media screen and (max-width: 568px) {
+                        width: 300px;
+                        height: 300px;
+                    }
                 }
             }
             .home-description {
                 font-size: var(--normal-font-size);
                 color: var(--color-light-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
             }
             .home-contact {
                 background-color: var(--color-primary);
@@ -168,6 +192,10 @@ a:active {
                 .about-food-image {
                     width: 600px;
                     height: 600px;
+                    @media screen and (max-width: 568px) {
+                        width: 270px;
+                        height: 270px;
+                    }
                 }
             }
             .about-description {
