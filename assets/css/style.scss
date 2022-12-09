@@ -128,7 +128,7 @@ a:active {
             .home-intro {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-proxima);
-                color: var(--color-light-black);
+                color: var(--color-dark-black);
                 @media screen and (max-width: 568px) {
                     font-size: var(--h2-font-size);
                 }
@@ -140,6 +140,7 @@ a:active {
                     @media screen and (max-width: 568px) {
                         width: 300px;
                         height: 300px;
+                        margin-top: var(--m-2);
                     }
                 }
             }
@@ -148,6 +149,7 @@ a:active {
                 color: var(--color-light-black);
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
+                    margin-bottom: var(--m-2);
                 }
             }
             .home-contact {
@@ -157,7 +159,10 @@ a:active {
                 color: var(--color-white);
                 text-decoration: none;
                 font-family: var(--body-font-futura);
-                font-size: var(--smaller-font-size)
+                font-size: var(--smaller-font-size);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
             }
         }
         .contact-summary {
@@ -175,6 +180,9 @@ a:active {
                 font-size: var(--smaller-font-size);
                 color: var(--color-dark-black);
                 font-family: var(--body-font-proxima);
+            }
+            @media screen and (max-width: 568px) {
+                margin: var(--m-3) 0;
             }
         }
         .about {

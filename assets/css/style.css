@@ -103,7 +103,7 @@ a:active {
 .container-fluid .container .home .home-intro {
   font-size: var(--big-font-size);
   font-family: var(--body-font-proxima);
-  color: var(--color-light-black);
+  color: var(--color-dark-black);
 }
 @media screen and (max-width: 568px) {
   .container-fluid .container .home .home-intro {
@@ -118,6 +118,7 @@ a:active {
   .container-fluid .container .home .home-food .home-food-image {
     width: 300px;
     height: 300px;
+    margin-top: var(--m-2);
   }
 }
 .container-fluid .container .home .home-description {
@@ -127,6 +128,7 @@ a:active {
 @media screen and (max-width: 568px) {
   .container-fluid .container .home .home-description {
     font-size: var(--small-font-size);
+    margin-bottom: var(--m-2);
   }
 }
 .container-fluid .container .home .home-contact {
@@ -137,6 +139,11 @@ a:active {
   text-decoration: none;
   font-family: var(--body-font-futura);
   font-size: var(--smaller-font-size);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .home .home-contact {
+    font-size: var(--small-font-size);
+  }
 }
 .container-fluid .container .contact-summary .summary-icons {
   font-size: 32px;
@@ -152,6 +159,11 @@ a:active {
   font-size: var(--smaller-font-size);
   color: var(--color-dark-black);
   font-family: var(--body-font-proxima);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .contact-summary {
+    margin: var(--m-3) 0;
+  }
 }
 .container-fluid .container .about .about-name {
   font-size: var(--h3-font-size);
