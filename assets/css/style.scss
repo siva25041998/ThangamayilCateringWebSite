@@ -16,6 +16,7 @@
 :root {
     // --font-family-futura: var('Futura');
     // --font-family-proxima: var('proxima');
+    --header-height:3rem ;
     // defined colors
     --color-primary: #FF9F0D;
     --color-dark-black: #484848;
@@ -83,6 +84,10 @@ a:active {
         background-position: 30px 0;
         background-size: 350px 250px;
     }
+    @media screen and (max-width: 320px) {
+        background-position: 30px 0;
+        background-size: 436px 250px;
+    }
 }
 
 .about-blob {
@@ -100,6 +105,13 @@ a:active {
     .container {
         .top-blob {
             .navbar {
+                background: var(--color-white);
+                top: 0;
+                bottom: initial;
+                @media screen and (max-width: 568px) {
+                    position: fixed;
+                    margin-bottom: 0;
+                }
                 .container-fluid {
                     .collapse {
                         .margin-left {
@@ -128,7 +140,7 @@ a:active {
             .home-intro {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-proxima);
-                color: var(--color-light-black);
+                color: var(--color-dark-black);
                 @media screen and (max-width: 568px) {
                     font-size: var(--h2-font-size);
                 }
@@ -157,7 +169,7 @@ a:active {
                 color: var(--color-white);
                 text-decoration: none;
                 font-family: var(--body-font-futura);
-                font-size: var(--smaller-font-size)
+                font-size: var(--smaller-font-size);
             }
         }
         .contact-summary {
@@ -216,6 +228,81 @@ a:active {
                 text-decoration: none;
                 color: var(--color-light-black);
             }
+        }
+
+        .service {
+            .service-name {
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-futura);
+                color: var(--color-primary);
+            }
+            .service-intro {
+                font-size: var(--big-font-size);
+                font-family: var(--body-font-proxima);
+                color: var(--color-dark-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
+            }
+            .service-img {
+                    width: 100px;
+                    height: 100px;
+                    @media screen and (max-width: 568px) {
+                        width: 80px;
+                        height: 80px;
+                    }
+            }
+            .service-img-title{
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-futura);
+                color: var(--color-dark-black);
+            }
+            .service-description {
+                font-size: var(--small-font-size);
+                color: var(--color-light-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
+            }
+        }
+
+        .menu-list{
+            .menu-list-name {
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-futura);
+                color: var(--color-primary);
+            }
+            .menu-list-intro {
+                font-size: var(--h2-font-size);
+                font-family: var(--body-font-proxima);
+                color: var(--color-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
+            }
+            .menu-list-description {
+                font-size: var(--small-font-size);
+                color: var(--color-light-black);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
+            }
+            .card-body{
+                .menu-list-btn{
+                    background: var(--color-primary);
+                    padding: var(--m-1) var(--m-2-5);
+                    border-radius: 43px 0 0 0;
+                    .menu-list-btn-icon{
+                        font-size: var(--h1-font-size);
+                        color: var(--color-white);
+                    }
+                }
+                .menu-item-price{
+                    font-size: var(--h1-font-size);
+                    color: var(--color-black);
+                    font-family: var(--body-font-futura);
+                }
+            } 
         }
     }
 }

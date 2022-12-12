@@ -11,6 +11,7 @@
   src: url("../fonts/ProximaNova-Regular.otf");
 }
 :root {
+  --header-height:3rem ;
   --color-primary: #FF9F0D;
   --color-dark-black: #484848;
   --color-light-black: #717171;
@@ -76,6 +77,12 @@ a:active {
     background-size: 350px 250px;
   }
 }
+@media screen and (max-width: 320px) {
+  .blob {
+    background-position: 30px 0;
+    background-size: 436px 250px;
+  }
+}
 
 .about-blob {
   background: url("../img/blobs/about-blob.svg");
@@ -90,6 +97,17 @@ a:active {
   }
 }
 
+.container-fluid .container .top-blob .navbar {
+  background: var(--color-white);
+  top: 0;
+  bottom: initial;
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .top-blob .navbar {
+    position: fixed;
+    margin-bottom: 0;
+  }
+}
 .container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left {
   margin-left: auto;
   margin-right: 250px;
@@ -103,7 +121,7 @@ a:active {
 .container-fluid .container .home .home-intro {
   font-size: var(--big-font-size);
   font-family: var(--body-font-proxima);
-  color: var(--color-light-black);
+  color: var(--color-dark-black);
 }
 @media screen and (max-width: 568px) {
   .container-fluid .container .home .home-intro {
@@ -190,4 +208,81 @@ a:active {
 .container-fluid .container .about .video .icon {
   color: var(--color-black);
   font-size: 32px;
+}
+.container-fluid .container .service .service-name {
+  font-size: var(--h3-font-size);
+  font-family: var(--body-font-futura);
+  color: var(--color-primary);
+}
+.container-fluid .container .service .service-intro {
+  font-size: var(--big-font-size);
+  font-family: var(--body-font-proxima);
+  color: var(--color-dark-black);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .service .service-intro {
+    font-size: var(--h2-font-size);
+  }
+}
+.container-fluid .container .service .service-img {
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .service .service-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+.container-fluid .container .service .service-img-title {
+  font-size: var(--h3-font-size);
+  font-family: var(--body-font-futura);
+  color: var(--color-dark-black);
+}
+.container-fluid .container .service .service-description {
+  font-size: var(--small-font-size);
+  color: var(--color-light-black);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .service .service-description {
+    font-size: var(--small-font-size);
+  }
+}
+.container-fluid .container .menu-list .menu-list-name {
+  font-size: var(--h3-font-size);
+  font-family: var(--body-font-futura);
+  color: var(--color-primary);
+}
+.container-fluid .container .menu-list .menu-list-intro {
+  font-size: var(--h2-font-size);
+  font-family: var(--body-font-proxima);
+  color: var(--color-black);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .menu-list .menu-list-intro {
+    font-size: var(--h2-font-size);
+  }
+}
+.container-fluid .container .menu-list .menu-list-description {
+  font-size: var(--small-font-size);
+  color: var(--color-light-black);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .menu-list .menu-list-description {
+    font-size: var(--small-font-size);
+  }
+}
+.container-fluid .container .menu-list .card-body .menu-list-btn {
+  background: var(--color-primary);
+  padding: var(--m-1) var(--m-2-5);
+  border-radius: 43px 0 0 0;
+}
+.container-fluid .container .menu-list .card-body .menu-list-btn .menu-list-btn-icon {
+  font-size: var(--h1-font-size);
+  color: var(--color-white);
+}
+.container-fluid .container .menu-list .card-body .menu-item-price {
+  font-size: var(--h1-font-size);
+  color: var(--color-black);
+  font-family: var(--body-font-futura);
 }/*# sourceMappingURL=style.css.map */
