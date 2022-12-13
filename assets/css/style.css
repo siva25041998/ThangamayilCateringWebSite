@@ -285,4 +285,21 @@ a:active {
   font-size: var(--h1-font-size);
   color: var(--color-black);
   font-family: var(--body-font-futura);
+}
+.container-fluid .container .menu-list .menu-list-load-more {
+  background-color: var(--color-primary);
+  border-radius: var(--br-1-5);
+  font-family: var(--body-font-futura);
+  text-decoration: none;
+  color: var(--color-white);
+  width: 130px;
+  padding: var(--m-0-75) var(--m-1-5);
+}
+.container-fluid .container .footer .footer-logo-img {
+  width: 36px;
+  height: 36px;
+}
+.container-fluid .container .footer .footer-href .footer-icons {
+  font-size: 18px;
+  color: var(--color-black);
 }/*# sourceMappingURL=style.css.map */
