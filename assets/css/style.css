@@ -295,6 +295,11 @@ a:active {
   width: 130px;
   padding: var(--m-0-75) var(--m-1-5);
 }
+.container-fluid .container .footer .row .nav-link {
+  font-size: var(--small-font-size);
+  color: var(--color-light-black);
+  font-family: var(--body-font-futura);
+}
 .container-fluid .container .footer .footer-logo-img {
   width: 36px;
   height: 36px;
@@ -302,4 +307,20 @@ a:active {
 .container-fluid .container .footer .footer-href .footer-icons {
   font-size: 18px;
   color: var(--color-black);
+}
+.container-fluid .container .footer .footer-description {
+  font-size: var(--normal-font-size);
+  color: var(--color-light-black);
+  margin-top: var(--m-2-5);
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .footer .footer-description {
+    font-size: var(--small-font-size);
+  }
+}
+.container-fluid .container .footer-img {
+  background: url("../img/cabbage-flower.png");
+  background-repeat: no-repeat;
+  background-position: 1054px 0px;
+  background-size: 245px 360px;
 }/*# sourceMappingURL=style.css.map */

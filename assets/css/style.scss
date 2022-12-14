@@ -317,6 +317,13 @@ a:active {
         }
 
         .footer{
+            .row{
+                .nav-link{
+                    font-size: var(--small-font-size);
+                    color: var(--color-light-black);
+                    font-family: var(--body-font-futura);
+                }
+            }
             .footer-logo-img{
                 width: 36px;
                 height: 36px;
@@ -327,17 +334,24 @@ a:active {
                     color: var(--color-black);
                 }
             }
+            .footer-description{
+                font-size: var(--normal-font-size);
+                color: var(--color-light-black);
+                margin-top: var(--m-2-5);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
+            }
         }
-        // .footer-blob{
-        //     background: url('../img/blobs/footer-blobs.svg');
-        //     background-repeat: no-repeat;
-        //     background-position: 987px 3002px;
-        //     background-size: 1100px 750px;
-        
-        //     // @media screen and (max-width: 568px) {
-        //     //     background-position: -170px 38px;
-        //     //     background-size: 409px 271px;
-        //     // }
-        // }
+        .footer-img{
+            background: url('../img/cabbage-flower.png');
+            background-repeat: no-repeat;
+            background-position: 1054px 0px;
+            background-size: 245px 360px;
+            // @media screen and (max-width: 568px) {
+            //     background-position: -170px 38px;
+            //     background-size: 409px 271px;
+            // }
+        }
     }
 }
