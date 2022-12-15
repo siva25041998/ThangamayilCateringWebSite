@@ -154,6 +154,7 @@ a:active {
                     @media screen and (max-width: 568px) {
                         width: 300px;
                         height: 300px;
+                        margin-top: var(--m-2-5);
                     }
                 }
             }
@@ -162,6 +163,7 @@ a:active {
                 color: var(--color-light-black);
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
+                    margin-bottom: var(--m-1-5);
                 }
             }
             .home-contact {
@@ -172,23 +174,31 @@ a:active {
                 text-decoration: none;
                 font-family: var(--body-font-futura);
                 font-size: var(--smaller-font-size);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
             }
         }
         .contact-summary {
-            .summary-icons {
-                font-size: 32px;
-                color: var(--color-primary)
-            }
-            .summary-text {
-                font-size: var(--normal-font-size);
-                color: var(--color-black);
-                font-weight: var(--font-semi-bold);
-                font-family: var(var(--body-font-futura));
-            }
-            .summary-description {
-                font-size: var(--smaller-font-size);
-                color: var(--color-dark-black);
-                font-family: var(--body-font-proxima);
+            .summarys{
+                @media screen and (max-width: 568px) {
+                    margin: var(--m-0-75) 0 ;
+                }
+                .summary-icons {
+                    font-size: 32px;
+                    color: var(--color-primary)
+                }
+                .summary-text {
+                    font-size: var(--normal-font-size);
+                    color: var(--color-black);
+                    font-weight: var(--font-semi-bold);
+                    font-family: var(var(--body-font-futura));
+                }
+                .summary-description {
+                    font-size: var(--smaller-font-size);
+                    color: var(--color-dark-black);
+                    font-family: var(--body-font-proxima);
+                }
             }
         }
         .about {
@@ -201,6 +211,9 @@ a:active {
                 font-size: var(--h2-font-size);
                 font-family: var(--body-font-proxima);
                 color: var(--color-light-black);
+                @media screen and (max-width: 568px) {
+                    margin: var(--m-0-75) 0 ;
+                }
             }
             .about-food {
                 .about-food-image {
@@ -269,6 +282,7 @@ a:active {
         }
 
         .menu-list{
+            margin-bottom: var(--m-3);
             .menu-list-name {
                 font-size: var(--h3-font-size);
                 font-family: var(--body-font-futura);
@@ -293,10 +307,17 @@ a:active {
                 .menu-list-btn{
                     background: var(--color-primary);
                     padding: var(--m-1) var(--m-2-5);
-                    border-radius: 43px 0 0 0;
+                    border-radius: 43px 0 16px 0;
+                    @media screen and (max-width: 568px) {
+                        padding: var(--m-0-75) var(--m-1);
+                        border-radius: 43px 0 16px 0;
+                    }
                     .menu-list-btn-icon{
                         font-size: var(--h1-font-size);
                         color: var(--color-white);
+                        @media screen and (max-width: 568px) {
+                            font-size: var(--normal-font-size);
+                        }
                     }
                 }
                 .menu-item-price{
@@ -340,6 +361,25 @@ a:active {
                 margin-top: var(--m-2-5);
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
+                }
+            }
+            .details{
+                .footer-description{
+                    font-size: var(--normal-font-size);
+                    color: var(--color-light-black);
+                    margin-top: var(--m-2-5);
+                    @media screen and (max-width: 568px) {
+                        font-size: var(--small-font-size);
+                    }
+                }
+                .footer-icons{
+                    .footer-icon{
+                        font-size: var(--h3-font-size);
+                        color: var(--color-light-black);
+                        @media screen and (max-width: 568px) {
+                            font-size: var(--small-font-size);
+                        } 
+                    }
                 }
             }
         }
