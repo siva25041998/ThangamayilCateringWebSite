@@ -20,6 +20,7 @@
   --big-font-size: 3rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
+  --sub-title-font-size: 1.27rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
   --small-font-size: .875rem;
@@ -41,6 +42,12 @@
   --br-0-2: 0.2rem;
   --br-1-0: 1rem;
   --br-1-5: 1.5rem;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -97,26 +104,139 @@ a:active {
   }
 }
 
-.container-fluid .container .top-blob .navbar {
-  background: var(--color-white);
+.header {
+  position: fixed;
   top: 0;
-  bottom: initial;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
 }
-@media screen and (max-width: 568px) {
-  .container-fluid .container .top-blob .navbar {
-    position: fixed;
-    margin-bottom: 0;
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin: 0 auto;
+}
+.header .navbar .menu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+.header .navbar .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .navbar .menu-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: var(--color-black);
+}
+.header .navbar .menu-link.is-active {
+  position: relative;
+  color: var(--color-teal-800);
+  transition: all 0.35s ease;
+}
+.header .navbar .menu-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  color: inherit;
+}
+.header .navbar .menu-name {
+  display: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  visibility: hidden;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 360px) {
+  .header .navbar .menu .menu-name {
+    display: block;
+    visibility: visible;
   }
 }
-.container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left {
-  margin-left: auto;
-  margin-right: 250px;
+@media only screen and (min-width: 576px) {
+  .header .navbar .menu .menu-list {
+    justify-content: center;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
 }
-.container-fluid .container .top-blob .navbar .container-fluid .collapse .margin-left .nav-item .nav-link {
-  font-size: var(--normal-font-size);
-  color: var(--color-black);
-  font-family: var(--body-font-proxima-regular);
-  font-weight: var(--font-normal);
+
+@media only screen and (min-width: 768px) {
+  .header {
+    background: var(--color-white);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.35s ease-in-out;
+  }
+  .menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+  }
+  .menu .nav-logo {
+    margin: 0 0 0 96px;
+    width: 32px;
+    height: 32px;
+  }
+  .menu .menu-list {
+    margin: 0 96px 0 0;
+  }
+  .menu .menu-list .menu-item .menu-link {
+    font-family: var(--body-font-futura);
+    font-size: var(--small-font-size);
+    text-decoration: none;
+  }
+  .menu .menu-list .menu-item .menu-link .menu-name {
+    color: var(--color-dark-black);
+  }
+  .menu-link.is-active::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2px;
+    border: none;
+    outline: none;
+    background: var(--color-teal-800);
+  }
+  .menu-link:hover {
+    color: var(--color-teal-800);
+    transition: all 0.35s ease;
+  }
+  .menu-icon {
+    display: none;
+    visibility: hidden;
+  }
+  .menu-name {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.2rem;
+  }
 }
 .container-fluid .container .home .home-intro {
   font-size: var(--big-font-size);
@@ -274,9 +394,14 @@ a:active {
   color: var(--color-primary);
 }
 .container-fluid .container .menu-list .menu-list-intro {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   font-family: var(--body-font-proxima);
   color: var(--color-black);
+}
+@media screen and (min-width: 569px) {
+  .container-fluid .container .menu-list .menu-list-intro {
+    font-size: var(--h3-font-size);
+  }
 }
 @media screen and (max-width: 568px) {
   .container-fluid .container .menu-list .menu-list-intro {
@@ -314,8 +439,27 @@ a:active {
 }
 .container-fluid .container .menu-list .card-body .menu-item-price {
   font-size: var(--h1-font-size);
-  color: var(--color-black);
+  color: var(--color-primary);
   font-family: var(--body-font-futura);
+  margin: 0 0 0 53px;
+}
+@media screen and (max-width: 1024px) {
+  .container-fluid .container .menu-list .card-body .menu-item-price {
+    font-size: var(--h3-font-size);
+    margin: 0 0 0 -1px;
+  }
+}
+@media screen and (min-width: 569px) {
+  .container-fluid .container .menu-list .card-body .menu-item-price {
+    font-size: var(--h3-font-size);
+    margin: 0 0 0 -1px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .container-fluid .container .menu-list .card-body .menu-item-price {
+    font-size: var(--h2-font-size);
+    margin: 0 0 0 54px;
+  }
 }
 .container-fluid .container .menu-list .menu-list-load-more {
   background-color: var(--color-primary);

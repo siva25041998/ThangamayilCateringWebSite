@@ -7,18 +7,82 @@
     <title>Thangamayil Catering</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon/logo.jpeg">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- font awesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Iconscout cdn -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- bootstrap cdn -->
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 " crossorigin="anonymous ">
 </head>
 
 <body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <!-- <a href="./index.html" class="brand">Brand</a> -->
+            <div class="menu d-flex align-items-center justify-content-between">
+                <div class="">
+                    <img 
+                        class="nav-logo"
+                        src="./assets/favicon/logo.jpeg"
+                    />
+                </div>
+                <ul class="menu-list float-end ">
+                    <li class="menu-item">
+                        <a href="#home" class="menu-link is-active">
+                            <!-- <i class="menu-icon ion-md-home"></i> -->
+                            <i class="menu-icon uil uil-estate"></i>
+                            <span class="menu-name">
+                                Home
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="#service" class="menu-link">
+                            <!-- <i class=" ion-md-cart"></i> -->
+                            <i class="menu-icon uil uil-crockery"></i>
+                            <span class="menu-name">
+                                Services
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#about" class="menu-link">
+                            <!-- <i class="menu-icon ion-md-search"></i> -->
+                            <i class="menu-icon uil uil-user"></i>
+                            <span class="menu-name">
+                                About
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#menu" class="menu-link">
+                            <!-- <i class="menu-icon ion-md-heart"></i> -->
+                            <i class="menu-icon uil uil-crockery"></i>
+                            <span class="menu-name">
+                                Menu
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#footer" class="menu-link">
+                            <!-- <i class="menu-icon ion-md-heart"></i> -->
+                            <i class="menu-icon uil uil-crockery"></i>
+                            <span class="menu-name">
+                                Menu
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="container-fluid blob ">
             <div class="container ">
                 <!-- Nav bar  -->
-                <div class="top-blob">
+                <!-- <div class="top-blob">
                     <nav class="navbar d-flex navbar-expand-lg w-100">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#">
@@ -50,7 +114,7 @@
                             </div>
                         </div>
                     </nav>
-                </div>
+                </div> -->
                 <!-- Snack bar -->
                 <!-- <div class="snack-bar">
                     <div class="row">
@@ -96,19 +160,19 @@
                 <div class="contact-summary my-3 my-sm-4">
                     <div class="row ">
                         <div class="col-lg-4 col-md-4 col-sm-12 text-center summarys">
-                            <i class="fa-solid fa-clock summary-icons "></i>
+                            <i class="uil uil-clock-five summary-icons"></i>
                             <p class="summary-text mt-3">Today 10:00 am - 7:00 pm</P>
                             <p class="summary-description">Working hours</p>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-12 text-center summarys">
-                            <i class="fa-solid fa-location-dot summary-icons "></i>
+                            <i class="uil uil-location-point summary-icons"></i>
                             <p class="summary-text mt-3">Gugai Salem</P>
                             <p class="summary-description">Get Direction</p>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-12 text-center summarys">
-                            <i class="fa-solid fa-phone summary-icons"></i>
+                            <i class="uil uil-phone summary-icons"></i>
                             <p class="summary-text mt-3">+91-9994730554</P>
                             <p class="summary-description">Call Online</p>
                         </div>
@@ -211,7 +275,7 @@
                 </div>
 
                 <!-- Menu List -->
-                <div class="menu-list ">
+                <div class="menu-list" id="menu">
                     <div class="text-center">
                         <p class="menu-list-name">
                             Menu
@@ -223,161 +287,122 @@
                             It's through mistakes that you actually can grow you get rid of <br>everything that is not essantial to makihave to get bad.
                         </p>
                         <div class="row d-flex justify-content-center">
-                            <div class="col-lg-4 my-3">
+                            <div class="col-lg-4 col-sm-4 my-3">
                                 <div class="card text-start" style="border: none;">
                                     <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row align-middle">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
-                                            </div> 
-                                        </div>
-                                  </div>
-                            </div>
-
-                            <div class="col-lg-4 my-3">
-                                <div class="card text-start" style="border: none;">
-                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row align-middle">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
                                             </div>
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
                                         </div>
                                   </div>
                             </div>
 
-                            <div class="col-lg-4 my-3">
+                            <div class="col-lg-4 col-sm-4 my-3">
                                 <div class="card text-start" style="border: none;">
                                     <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row align-middle">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
-                                            </div> 
-                                        </div>
-                                  </div>
-                            </div>
-
-                            <div class="col-lg-4 my-3">
-                                <div class="card text-start" style="border: none;">
-                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row align-middle">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
                                             </div>
+                                            
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
                                         </div>
                                   </div>
                             </div>
 
-                            <div class="col-lg-4 my-3">
+                            <div class="col-lg-4 col-sm-4 my-3">
                                 <div class="card text-start" style="border: none;">
                                     <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row align-middle">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
-                                            </div> 
-                                        </div>
-                                  </div>
-                            </div>
-
-                            <div class="col-lg-4 my-3">
-                                <div class="card text-start" style="border: none;">
-                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title menu-list-intro">
-                                                Rose Muffan
-                                            </h5>
-                                            <p class="card-text menu-list-description">
-                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                            </p>
-                                            <div class="row d-flex align-items-center">
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <p class="menu-item-price">
-                                                        176 rs
-                                                    </p>
-                                                 </div>
-                                                 <div class="col-lg-6 col-md-6 col-sm-6">
-                                                    <a href="#" class="float-end menu-list-btn">
-                                                        <i class="fa-solid fa-plus menu-list-btn-icon"></i>
-                                                    </a>
-                                                 </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
                                             </div>
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
                                         </div>
                                   </div>
                             </div>
+
+                            <div class="col-lg-4 col-sm-4 my-3">
+                                <div class="card text-start" style="border: none;">
+                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
+                                            </div>
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
+                                        </div>
+                                  </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 my-3">
+                                <div class="card text-start" style="border: none;">
+                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
+                                            </div>
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
+                                        </div>
+                                  </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-4 my-3">
+                                <div class="card text-start" style="border: none;">
+                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <h5 class="card-title menu-list-intro w-100">
+                                                    Rose Muffan 
+                                                </h5>
+                                                <p class="menu-item-price text-end">
+                                                    Rs.176
+                                                </p>
+                                            </div>
+                                            <p class="card-text menu-list-description">
+                                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                                            </p>
+                                        </div>
+                                  </div>
+                            </div>
+
+                            
                             <!-- <a class="menu-list-load-more">
                                 Load more
                             </a> -->

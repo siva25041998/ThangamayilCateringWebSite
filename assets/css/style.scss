@@ -28,6 +28,7 @@
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
+    --sub-title-font-size: 1.27rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
@@ -51,6 +52,12 @@
     --br-0-2: 0.2rem;
     --br-1-0: 1rem;
     --br-1-5: 1.5rem;
+}
+
+html {
+	font-size: 100%;
+	box-sizing: inherit;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -102,42 +109,163 @@ a:active {
 }
 
 
-
-.container-fluid {
-    .container {
-        .top-blob {
-            .navbar {
-                background: var(--color-white);
-                top: 0;
-                bottom: initial;
-                @media screen and (max-width: 568px) {
-                    position: fixed;
-                    margin-bottom: 0;
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 100;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        margin: 0 auto;
+        .menu {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: grid;
+            align-content: center;
+            width: 100%;
+            height: 3.5rem;
+            padding: 0 1rem;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            background: var(--color-white);
+            box-shadow: var(--shadow-medium);
+        
+            &-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        
+            &-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                color: var(--color-black);
+        
+                &.is-active {
+                    position: relative;
+                    color: var(--color-teal-800);
+                    transition: all 0.35s ease;
                 }
-                .container-fluid {
-                    .collapse {
-                        .margin-left {
-                            margin-left: auto;
-                            margin-right: 250px;
-                            .nav-item {
-                                .nav-link {
-                                    font-size: var(--normal-font-size);
-                                    color: var(--color-black);
-                                    font-family: var(--body-font-proxima-regular);
-                                    font-weight: var(--font-normal);
-                                }
-                            }
-                        }
+            }
+        
+            &-icon {
+                font-size: 1.35rem;
+                line-height: 1;
+                color: inherit;
+            }
+        
+            &-name {
+                display: none;
+                font-family: inherit;
+                font-size: 0.875rem;
+                font-weight: 500;
+                line-height: 1.25;
+                visibility: hidden;
+                text-transform: capitalize;
+            }
+
+            // Responsive Media Query Breakpoint
+            @media only screen and (min-width: 360px) {
+                .menu {
+                    &-name {
+                        display: block;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 576px) {
+                .menu {
+                    &-list {
+                        justify-content: center;
+                        column-gap: 3rem;
                     }
                 }
             }
         }
-        // .snack-bar {
-        //     display: none;
-        //     @media screen and (max-width: 568px) {
-        //         display: inline;
-        //     }
-        // }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+	.header {
+		background: var(--color-white);
+		box-shadow: var(--shadow-medium);
+		transition: all 0.35s ease-in-out;
+	}
+
+	.menu {
+        .nav-logo{
+            margin: 0 0 0 96px;
+            width: 32px;
+            height: 32px;
+        }
+        .menu-list{
+            margin: 0 96px 0 0 ;
+            .menu-item{
+                .menu-link{
+                    font-family: var(--body-font-futura);
+                    font-size: var(--small-font-size);
+                    text-decoration: none;
+                    .menu-name{
+                        color: var(--color-dark-black);
+                    }
+                }
+            }
+        }
+		position: relative;
+		top: 0;
+		right: 0;
+		width: auto;
+		height: auto;
+		background: none;
+		box-shadow: none;
+
+		&-link {
+			&.is-active::before {
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: 0;
+				width: 2rem;
+				height: 2px;
+				border: none;
+				outline: none;
+				background: var(--color-teal-800);
+			}
+
+			&:hover {
+				color: var(--color-teal-800);
+				transition: all 0.35s ease;
+			}
+		}
+
+		&-icon {
+			display: none;
+			visibility: hidden;
+		}
+
+		&-name {
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 1.5;
+			margin-bottom: 0.2rem;
+		}
+	}
+}
+
+.container-fluid {
+    .container {
         .home {
             .home-intro {
                 font-size: var(--big-font-size);
@@ -289,9 +417,14 @@ a:active {
                 color: var(--color-primary);
             }
             .menu-list-intro {
-                font-size: var(--h2-font-size);
+                font-size: var(--h1-font-size);
                 font-family: var(--body-font-proxima);
                 color: var(--color-black);
+                @media screen and (min-width: 569px) {
+                    // font-size: var(--sub-title-font-size);
+                    font-size: var(--h3-font-size);
+
+                }
                 @media screen and (max-width: 568px) {
                     font-size: var(--h2-font-size);
                 }
@@ -322,8 +455,23 @@ a:active {
                 }
                 .menu-item-price{
                     font-size: var(--h1-font-size);
-                    color: var(--color-black);
+                    color: var(--color-primary);
                     font-family: var(--body-font-futura);
+                    margin: 0 0 0 53px;
+                    @media screen and (max-width: 1024px) {
+                        font-size: var(--h3-font-size);
+                        // font-size: var(--sub-title-font-size);
+                        margin: 0 0 0 -1px;
+                    }
+                    @media screen and (min-width: 569px) {
+                        font-size: var(--h3-font-size);
+                        // font-size: var(--sub-title-font-size);
+                        margin: 0 0 0 -1px;
+                    }
+                    @media screen and (max-width: 568px) {
+                        font-size: var(--h2-font-size);
+                        margin: 0 0 0 54px;
+                    }
                 }
             } 
             .menu-list-load-more{
