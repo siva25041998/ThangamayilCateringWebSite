@@ -4,13 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thangamayil Catering</title>
+    
+    <!-- Document title (Website title name) -->
+    <title>
+        Thangamayil Catering
+    </title>
+    
+    <!-- Fav icon for this page -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon/logo.jpeg">
+    
+    <!-- Style file -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    
     <!-- Iconscout cdn -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    
     <!-- bootstrap cdn -->
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 " crossorigin="anonymous ">
+
+    <!-- JQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,8 +31,8 @@
     <header class="header" id="header">
         <nav class="navbar">
             <!-- <a href="./index.html" class="brand">Brand</a> -->
-            <div class="menu d-flex align-items-center justify-content-between">
-                <div class="">
+            <div class="menu w-100 d-flex align-items-center justify-content-between">
+                <div class="logo-img">
                     <a href="#">
                         <img 
                             class="nav-logo"
@@ -30,7 +43,6 @@
                 <ul class="menu-list float-end ">
                     <li class="menu-item">
                         <a href="#home" class="menu-link is-active">
-                            <!-- <i class="menu-icon ion-md-home"></i> -->
                             <i class="menu-icon uil uil-estate"></i>
                             <span class="menu-name">
                                 Home
@@ -89,13 +101,13 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <p class="home-intro">
-                                Your Favourite Food<br>Deliver with hot &<br>Fresh
+                                Your Fav Food Deliver with hot & Fresh from <span class="home-price">&#8377; 70 rs</span>.
                             </p>
                             <p class="home-description">
-                                Healthy switcher chef's do oil the prep burg, like peeding,chopping & marinating, so you can cook a fresh food
+                                Our Healthy switcher chef's do the prep burg, like peeding, chopping. We are cooking the fresh food for Marriage, House functions, Events & programs ans more.
                             </p>
                             <a class="home-contact ">
-                                Contact Us
+                                Order Now
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 home-food">
@@ -110,17 +122,17 @@
                         <div class="col-lg-4 col-md-4 col-sm-6 text-center summarys">
                             <i class="uil uil-clock-five summary-icons"></i>
                             <p class="summary-text mt-3">
-                                Today 10:00 am - 7:00 pm
+                                support@thangamayilcatering.com
                             </P>
                             <p class="summary-description">
-                                Working 
+                                Mail Us 
                             </p>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-6 text-center summarys">
                             <i class="uil uil-location-point summary-icons"></i>
                             <p class="summary-text mt-3">
-                                Gugai Salem
+                                68/83, Karungalpatty
                             </P>
                             <p class="summary-description">
                                 Get Direction
@@ -133,7 +145,7 @@
                                 +91-936-266-6315
                             </P>
                             <p class="summary-description">
-                                Call Mobile
+                                Call for Order
                             </p>
                         </div>
                     </div>
@@ -147,7 +159,7 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-6 about-food ">
                             <img 
-                                src="./assets/img/homeFoodImage.png" 
+                                src="./assets/img/about-food-img.png" 
                                 alt="Thangamayil Catering" 
                                 class="about-food-image" 
                             />
@@ -156,11 +168,8 @@
                             <p class="about-intro">
                                 Food Is An Important Part Of A Balanced Died
                             </p>
-                            <p class="about-description">
-                                They actually assured ine over and over that take little time off and come back and service. Fast forward towels after we are <br> going for a new project.
-                            </p>
-                            <p class="about-description">
-                                I wrote to let them know ready to come back they<br> kicked.
+                            <p class="about-description lh-lg">
+                                We actually assured in over and over that take little time off and come back and service. Fast forwarding after we are doing variety of new dishes for making happy of You. Not bored & slow down to deliver your Orders for everything like Marriage, House functions, Temple functions, Events and programs and more. selling the veg and non-veg type of curry to your daily needs.
                             </p>
                             <!-- <a class="more px-3 py-2 more">
                                 Learn More
@@ -182,8 +191,9 @@
                             It's through mistakes that you actually can grow you get rid of <br>everything that is not essantial to makihave to get bad.
                         </p>
                     </div>
-                    <div class="row text-center">
-                        <div class="col-lg-4 co-md-4 col-sm-12 text-center">
+
+                    <div class="row text-center d-flex justify-content-center">
+                        <div class="col-lg-4 co-md-4 col-sm-6 text-center">
                             <img
                                 src="./assets/img/chicken-peice.png" 
                                 class="service-img"
@@ -193,11 +203,11 @@
                                 Pick Meals
                             </p>
                             <p class="service-img-description">
-                                Choose your meal from our <br> diverse weekly menu, find glupen <br> are dairy free, low cart and veggie <br> options.
+                                Choose your meal from our <br> diverse weekly <span class="service-menu"><a href="#menu">menu</a></span>, find glupen <br> are dairy free, low cart and veggie <br> options.
                             </p>
                         </div>
 
-                        <div class="col-lg-4 co-md-4 col-sm-12 text-center">
+                        <div class="col-lg-4 co-md-4 col-sm-6 text-center">
                             <img
                                 src="./assets/img/choose-often.png" 
                                 class="service-img"
@@ -211,7 +221,7 @@
                             </p>
                         </div>
 
-                        <div class="col-lg-4 co-md-4 col-sm-12 text-center">
+                        <div class="col-lg-4 co-md-4 col-sm-6 text-center">
                             <img
                                 src="./assets/img/fast-delivary.png" 
                                 class="service-img"
@@ -242,6 +252,8 @@
 
                         <!-- Menu list based on category -->
                         <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                            <!-- Veg Items -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -272,129 +284,154 @@
                                                   </div>
                                             </div> -->
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Idli -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/idli.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Idli 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Idli vadai -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/idli-withi-vadai.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Idli Vadai
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3+1 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Dosa -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/normal-dosai.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Dosa 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Plain -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/plain-dosai.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Plain
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     1 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Masala Dosa -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/dosai.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Masal Dosa 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     1 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Chapati -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/chapati.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
-                                                                    Chapaathi 
+                                                                    Chapati 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Poori -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/poori.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Poori 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3 pcs / P
-                                                                </span>
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
                                             </div>
 
-                                            <div class="col-lg-4 col-sm-4 my-3">
+                                            <!-- Parota -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
                                                 <div class="card text-start gallery-items gallery-items" style="border: none;">
                                                     <img src="./assets/img/parotta.png" class="card-img-top" alt="...">
                                                         <div class="card-body ">
-                                                            <div class="w-100 d-flex justify-content-around">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
                                                                 <p class="card-title menu-list-intro">
                                                                     Parotta 
                                                                 </p>
-                                                                <span class="menu-item-price">
+                                                                <!-- <span class="menu-item-price">
                                                                     3 pcs / P
-                                                                </span>
+                                                                </span> -->
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                            </div>
+
+                                            <!-- Full Meal -->
+                                            <div class="col-lg-4 col-md-4 col-sm-4 my-3">
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/full-meal.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Full Meal
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    Full / P
+                                                                </span> -->
                                                             </div>
                                                         </div>
                                                   </div>
@@ -405,6 +442,7 @@
                                 </div>
                             </div>
 
+                            <!-- Non-Veg Items -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -413,119 +451,106 @@
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
-                                        Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
                                         <div class="row d-flex justify-content-center">
+
+                                            <!-- Chicken Biriyani -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/chicken-biriyani.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Chicken Biriyani 
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
-                
+
+                                            <!-- Mutton Biriyani -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/mutton-biriyani.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Mutton Biriyani
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
-                
+
+                                            <!-- Fish Biriyani -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/fish-biriyani.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Fish Biriyani
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
-                
+
+                                            <!-- Kuska -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/kuska.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Kuska
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
-                
+
+                                            <!-- Chicken Rice -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/chicken-rice.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Chicken Rice
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
-                
+
+                                            <!-- Egg Rice -->
                                             <div class="col-lg-4 col-sm-4 my-3">
-                                                <div class="card text-start gallery-items" style="border: none;">
-                                                    <img src="./assets/img/menu-food.png" class="card-img-top" alt="...">
-                                                        <div class="card-body">
-                                                            <div class="w-100 d-flex justify-content-between">
-                                                                <h5 class="card-title menu-list-intro w-100">
-                                                                    Rose Muffan 
-                                                                </h5>
-                                                                <!-- <p class="menu-item-price text-end">
-                                                                    Rs.176
-                                                                </p> -->
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/egg-rice.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Egg Rice
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
                                                             </div>
-                                                            <p class="card-text menu-list-description">
-                                                                Some quick example text to build on the card title and make up the bulk of the card's content.
-                                                            </p>
                                                         </div>
                                                   </div>
                                             </div>
@@ -539,6 +564,7 @@
                                 </div>
                             </div>
 
+                            <!-- Snack Items -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
@@ -546,7 +572,83 @@
                                     </button>
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                    <div class="accordion-body">
+                                        <div class="row d-flex justify-content-center">
+
+                                            <!-- Chilli Chicken -->
+                                            <div class="col-lg-4 col-sm-4 my-3">
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/chilli-chicken.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Chilli Chicken
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                            </div>
+
+                                            <!-- Samosa -->
+                                            <div class="col-lg-4 col-sm-4 my-3">
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/samos.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Samosa
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                            </div>
+
+                                            <!-- Bajji -->
+                                            <div class="col-lg-4 col-sm-4 my-3">
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/bajji.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Bajji
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
+                                                            </div>
+                                                        </div>
+                                                  </div>
+                                            </div>
+
+                                            <!-- Coliflower Chilli -->
+                                            <div class="col-lg-4 col-sm-4 my-3">
+                                                <div class="card text-start gallery-items gallery-items" style="border: none;">
+                                                    <img src="./assets/img/coliflower-chilli.png" class="card-img-top" alt="...">
+                                                        <div class="card-body ">
+                                                            <div class="w-100 d-flex justify-content-around align-items-center">
+                                                                <p class="card-title menu-list-intro">
+                                                                    Coliflower Chilli
+                                                                </p>
+                                                                <!-- <span class="menu-item-price">
+                                                                    3 pcs / P
+                                                                </span> -->
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <!-- <a class="menu-list-load-more">
+                                                Load more
+                                            </a> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -675,26 +777,26 @@
                 </div>
 
                 <!-- Footer -->
-                <div class="footer footer-blob" id="footer">
+                <div class="footer footer-blob mb-4" id="footer">
                     <footer class="footer-section">
                         <div class="container">
-                            <div class="footer-cta pt-5 pb-5">
+                            <!-- <div class="footer-cta pt-5 pb-5">
                                 <div class="row d-flex justify-content-around">
                                     <div class="col-xl-4 col-md-4 mb-30">
-                                        <div class="single-cta">
+                                        <div class="single-cta d-flex justify-content-center">
                                             <i class="uil uil-location-point"></i>
                                             <div class="cta-text">
                                                 <h4>
                                                     Find us
                                                 </h4>
                                                 <span>
-                                                    1010 Avenue, sw 54321, chandigarh
+                                                    68/83, Karungalpatty
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-4 mb-30 ">
-                                        <div class="single-cta">
+                                        <div class="single-cta d-flex justify-content-center">
                                             <i class="uil uil-phone"></i>
                                             <div class="cta-text">
                                                 <h4>Call us</h4>
@@ -703,7 +805,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-4 mb-30">
-                                        <div class="single-cta">
+                                        <div class="single-cta d-flex justify-content-center">
                                             <i class="uil uil-envelope-alt"></i>
                                             <div class="cta-text">
                                                 <h4>Mail us</h4>
@@ -712,7 +814,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="footer-content pt-5 pb-5 d-flex align-self-center">
                                 <div class="row ">
                                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 mb-50">
@@ -724,22 +826,10 @@
                                                     alt="logo"
                                                 />
                                             </div>
-                                            
-                                            <!-- <div class="footer-social-icon">
-                                                <span>Follow us</span>
-                                                <a href="#"><i class="uil uil-facebook-f facebook-bg"></i></a>
-                                                <a href="#"><i class="uil uil-envelope-alt twitter-bg"></i></a>
-                                                <a href="#"><i class="uil uil-facebook-f google-bg"></i></a>
-                                            </div> -->
                                         </div>
                                     </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 mb-30">
+                                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3 mb-30">
                                         <div class="footer-widget">
-                                            <!-- <div class="footer-widget-heading">
-                                                <h3>
-                                                    Useful Links
-                                                </h3>
-                                            </div> -->
                                             <ul>
                                                 <li>
                                                     <i class="uil uil-estate me-2"></i>
@@ -774,7 +864,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 mb-50">
+                                    <div class="col-xl-6 col-lg-6 col-md-5 col-sm-6 mb-50">
                                         <div class="footer-widget-heading">
                                             <h3>
                                                 Who we are
@@ -782,9 +872,7 @@
                                         </div>
                                         <div class="footer-text">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                                elit,Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                                elit,Lorem ipsum dolor sit amet.
+                                                We actually assured in over and over that take little time off and come back and service. Fast forwarding after we are doing variety of new dishes for making happy of You. Not bored & slow down to deliver your Orders for everything like Marriage, House functions, Temple functions, Events and programs and more. selling the veg and non-veg type of curry to your daily needs.
                                             </p>
                                         </div>
                                         <!-- <div class="footer-widget">
@@ -824,6 +912,7 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 " crossorigin="anonymous "></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
