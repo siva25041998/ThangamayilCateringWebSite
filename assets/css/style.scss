@@ -361,20 +361,22 @@ a:active {
                 @media screen and (max-width: 568px) {
                     margin: var(--m-0-75) 0 ;
                 }
-                .summary-icons {
-                    font-size: 32px;
-                    color: var(--color-primary)
-                }
-                .summary-icons:hover {
-                    // font-size: 32px;
-                    
-                    background: var(--color-primary);
-                    color: var(--color-white);
-                    padding: 5px 8px;
-                    border-radius: 100%;
-                    transition: 1000ms ease-in-out;
-                    box-shadow:  4px 4px 36px var(--color-primary);
-                cursor: pointer;
+                .summary-tag{
+                    .summary-icons {
+                        font-size: 32px;
+                        color: var(--color-primary)
+                    }
+                    .summary-icons:hover {
+                        // font-size: 32px;
+                        
+                        background: var(--color-primary);
+                        color: var(--color-white);
+                        padding: 5px 8px;
+                        border-radius: 100%;
+                        transition: 1000ms ease-in-out;
+                        box-shadow:  4px 4px 36px var(--color-primary);
+                        cursor: pointer;
+                    }
                 }
                 .summary-text {
                     font-size: var(--normal-font-size);
@@ -496,7 +498,7 @@ a:active {
                 }
             }
         }
-        .menu-list{
+        .menus{
             
             margin-bottom: var(--m-3);
             .menu-list-name {
@@ -562,31 +564,55 @@ a:active {
 
             .accordion{
                 .accordion-item{
-                    .accordion-header{
-                        .accordion-button{
+                    .food-items{
+                        .food-items-title{
                             color: var(--color-primary);
-                            text-decoration: none;
+                            font-family: var(--body-font-proxima);
+                            font-size: var(--big-font-size);
+                            @media screen and (max-width: 768px) {
+                                font-size: var(--h2-font-size);
+                            }
                         }
-                        .accordion-button[aria-expanded="true"] {
-                            background-color: rgba(var(--color-white),0 0,0.5);
-                            
-                          }
-                        .accordion-button:hover{
-                            background: var(--color-primary);
-                            // border-radius: 12px;
-                            transform: scale(1.01);
-                            transition: 1000ms ease-in-out;
-                            color: var(--color-black);
-                            // opacity: 0.01;
+                        .food-items-description{
+                            color: var(--color-light-black);
+                            font-family: var(--body-font-proxima-regular);
+                            font-size: var(--h3-font-size);
+                            @media screen and (max-width: 768px) {
+                                font-size: var(--normal-font-size);
+                            }
                         }
-                        .accordion-button:focus {
-                            outline: none !important;
-                            outline-width: 0 !important;
-                            box-shadow: none;
-                            -moz-box-shadow : none;
-                            -webkit-box-shadow: none;
+                        .food-item-img{
+                            width: 200px;
+                            height: auto;
                         }
                     }
+                    .accordion-button{
+                        color: var(--color-primary);
+                        text-decoration: none;
+                    }
+                    .accordion-button[aria-expanded="true"] {
+                        background-color: rgba(var(--color-white),0 0,0.5);
+                        
+                    }
+                    .accordion-button:hover{
+                        // background: var(--color-primary);
+                        // border-radius: 12px;
+                        transform: scale(1.01);
+                        transition: 1000ms ease-in-out;
+                        color: var(--color-black);
+                        // opacity: 0.01;
+                    }
+                    .accordion-button:focus {
+                        outline: none !important;
+                        outline-width: 0 !important;
+                        box-shadow: none;
+                        -moz-box-shadow : none;
+                        -webkit-box-shadow: none;
+                    }
+                    // .accordion-header{
+                        
+                        
+                    // }
                 }
                 .accordion-body{
                     .gallery-items{
