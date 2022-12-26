@@ -345,6 +345,7 @@ a:active {
                 margin-top: 20px;
                 font-family: var(--body-font-futura);
                 font-size: var(--smaller-font-size);
+                box-shadow:  4px 4px 16px rgba(0,0,0,0.2);
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
                 }
@@ -564,26 +565,31 @@ a:active {
 
             .accordion{
                 .accordion-item{
-                    .food-items{
-                        .food-items-title{
-                            color: var(--color-primary);
-                            font-family: var(--body-font-proxima);
-                            font-size: var(--big-font-size);
-                            @media screen and (max-width: 768px) {
-                                font-size: var(--h2-font-size);
+                    margin: var(--m-2) 0;
+                    border-radius: var(--br-1-0);
+                    box-shadow:  4px 4px 16px rgba(0,0,0,0.1);
+                    .accordion-header{
+                        .accordion-button{
+                            .food-items-title{
+                                color: var(--color-primary);
+                                font-family: var(--body-font-proxima);
+                                font-size: var(--h1-font-size);
+                                @media screen and (max-width: 768px) {
+                                    font-size: var(--normal-font-size);
+                                }
                             }
-                        }
-                        .food-items-description{
-                            color: var(--color-light-black);
-                            font-family: var(--body-font-proxima-regular);
-                            font-size: var(--h3-font-size);
-                            @media screen and (max-width: 768px) {
-                                font-size: var(--normal-font-size);
+                            .food-items-description{
+                                color: var(--color-light-black);
+                                font-family: var(--body-font-proxima-regular);
+                                font-size: var(--h3-font-size);
+                                @media screen and (max-width: 768px) {
+                                    font-size: var(--normal-font-size);
+                                }
                             }
-                        }
-                        .food-item-img{
-                            width: 200px;
-                            height: auto;
+                            .food-item-img{
+                                width: 200px;
+                                height: auto;
+                            }
                         }
                     }
                     .accordion-button{
@@ -614,6 +620,10 @@ a:active {
                         
                     // }
                 }
+                // .accordion-item:hover{
+                //     box-shadow:  8px 8px 16px rgba(0,0,0,0.2);
+                //     transition: 1000ms ease-in-out;
+                // }
                 .accordion-body{
                     .gallery-items{
                         border-radius: var(--br-1-5);

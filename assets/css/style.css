@@ -306,6 +306,7 @@ a:active {
   margin-top: 20px;
   font-family: var(--body-font-futura);
   font-size: var(--smaller-font-size);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 568px) {
   .container-fluid .container .home .home-contact {
@@ -519,27 +520,32 @@ a:active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container-fluid .container .menus .accordion .accordion-item .food-items .food-items-title {
+.container-fluid .container .menus .accordion .accordion-item {
+  margin: var(--m-2) 0;
+  border-radius: var(--br-1-0);
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+}
+.container-fluid .container .menus .accordion .accordion-item .accordion-header .accordion-button .food-items-title {
   color: var(--color-primary);
   font-family: var(--body-font-proxima);
-  font-size: var(--big-font-size);
+  font-size: var(--h1-font-size);
 }
 @media screen and (max-width: 768px) {
-  .container-fluid .container .menus .accordion .accordion-item .food-items .food-items-title {
-    font-size: var(--h2-font-size);
+  .container-fluid .container .menus .accordion .accordion-item .accordion-header .accordion-button .food-items-title {
+    font-size: var(--normal-font-size);
   }
 }
-.container-fluid .container .menus .accordion .accordion-item .food-items .food-items-description {
+.container-fluid .container .menus .accordion .accordion-item .accordion-header .accordion-button .food-items-description {
   color: var(--color-light-black);
   font-family: var(--body-font-proxima-regular);
   font-size: var(--h3-font-size);
 }
 @media screen and (max-width: 768px) {
-  .container-fluid .container .menus .accordion .accordion-item .food-items .food-items-description {
+  .container-fluid .container .menus .accordion .accordion-item .accordion-header .accordion-button .food-items-description {
     font-size: var(--normal-font-size);
   }
 }
-.container-fluid .container .menus .accordion .accordion-item .food-items .food-item-img {
+.container-fluid .container .menus .accordion .accordion-item .accordion-header .accordion-button .food-item-img {
   width: 200px;
   height: auto;
 }
