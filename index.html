@@ -38,9 +38,15 @@
     
     <!-- bootstrap cdn -->
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65 " crossorigin="anonymous ">
+    
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 
     <!-- JQuery CDN Link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -96,7 +102,7 @@
                     </li>
 
                     <li class="menu-item">
-                        <a href="#footer" class="menu-link">
+                        <a href="#contact" class="menu-link">
                             <!-- <i class="menu-icon ion-md-heart"></i> -->
                             <i class="menu-icon uil uil-message"></i>
                             <span class="menu-name">
@@ -113,6 +119,115 @@
         <div class="container-fluid blob ">
             <div class="container">
   
+                <!-- Testing Home -->
+                <!-- <div class="home" id="home">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <p class="home-intro">
+                                Thangamayil Catering
+                            </p>
+                            <p class="home-description">
+                                Our Healthy switcher chef's do the prep burg, like peeding, chopping. We are cooking the fresh food for Marriage, House functions, Events & programs ans more.
+                            </p>
+                            <a class="home-contact" href="tel:+91-936-266-6315">
+                                Order Now
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 home-food">
+                            
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/chicken-biriyani.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Chicken Biriyani
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/mutton-biriyani.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Mutton Biriyani
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/chilli-chicken.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Chilli Chicken
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/egg-rice.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Egg Rice
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/idli.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Idli
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/idli-withi-vadai.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Idli with vadai
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/dosai.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Dosa
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/poori.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Poori
+                                        </p>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img 
+                                            class="swiper-img"
+                                            src="./assets/img/parotta.svg"
+                                        />
+                                        <p class="text-center swiper-img-name">
+                                            Parotta
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="popular-food-item text-center">
+                                Our Popular food items
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
                 <!-- Home -->
                 <div class="home" id="home">
                     <div class="row d-flex align-items-center">
@@ -120,6 +235,9 @@
                             <p class="home-intro">
                                 Your Fav Food Deliver with hot & Fresh from <span class="home-price"><b>&#8377;</b> 70 rs</span>.
                             </p>
+                            <!-- <p class="home-intro">
+                                Thangamayil Catering
+                            </p> -->
                             <p class="home-description">
                                 Our Healthy switcher chef's do the prep burg, like peeding, chopping. We are cooking the fresh food for Marriage, House functions, Events & programs ans more.
                             </p>
@@ -134,7 +252,7 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="contact-summary">
+                <div class="contact-summary" id="contact">
                     <div class="row ">
                         <div class="col-lg-4 col-md-4 col-sm-6 text-center summarys">
                             <a href="mailto:support@thangamayilcatering.com" target="_blank" class="summary-tag">
@@ -274,11 +392,11 @@
                         </p>
 
                         <!-- Menu list based on category -->
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
                             <div class="accordion-item">
-                              <div class="accordion-header" id="flush-headingOne">
-                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    <div class="col-lg-6 col-md-6 col-sm-6" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              <div class="accordion-header" id="panelsStayOpen-headingOne">
+                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
                                         <p class="food-items-title">
                                             Veg Items
                                         </p>
@@ -294,7 +412,7 @@
                                     </div>
                                 </div>
                             </div>
-                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body">
                                     <div class="row d-flex justify-content-center">
                                         <!-- pre-defined model -->
@@ -476,9 +594,9 @@
                               </div>
                             </div>
                             <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingTwo">
-                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    <div class="col-lg-6 col-md-6 col-sm-6" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              <div class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
                                         <p class="food-items-title">
                                             Non-Veg Items
                                         </p>
@@ -493,8 +611,8 @@
                                         />
                                     </div>
                                 </div>
-                              </h2>
-                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            </div>
+                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body">
                                     <div class="row d-flex justify-content-center">
 
@@ -609,8 +727,8 @@
                               </div>
                             </div>
                             <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingThree">
-                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              <div class="accordion-header" id="panelsStayOpen-headingThree">
+                                <div class="accordion-button collapsed row" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                     <div class="col-lg-6 col-md-6 col-sm-6" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <p class="food-items-title">
                                             Snacks Items
@@ -626,8 +744,8 @@
                                         />
                                     </div>
                                 </div>
-                              </h2>
-                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            </div>
+                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                                 <div class="accordion-body">
                                     <div class="row d-flex justify-content-center">
 
@@ -707,7 +825,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                        </div>
                         
                         <!-- <div class="row d-flex justify-content-center">
                             <div class="col-lg-4 col-sm-4 my-3">
@@ -896,25 +1014,25 @@
                                                 </li>
                                                 <li>
                                                     <i class="uil uil-user me-2"></i>
-                                                    <a href="#">
+                                                    <a href="#about">
                                                         About
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <i class="uil uil-truck me-2"></i>
-                                                    <a href="#">
+                                                    <a href="#service">
                                                         Services
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <i class=" uil uil-crockery me-2"></i>
-                                                    <a href="#">
+                                                    <a href="#menu">
                                                         Menu
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <i class="uil uil-message me-2"></i>
-                                                    <a href="#">
+                                                    <a href="#contact">
                                                         Contact
                                                     </a>
                                                 </li>
@@ -968,8 +1086,15 @@
             </div>
         </div>
     </main>
+    <!-- Bootdstrap js include -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4 " crossorigin="anonymous "></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Js file include -->
     <script src="./assets/js/index.js"></script>
+
 </body>
 
 </html>

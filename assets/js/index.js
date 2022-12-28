@@ -8,6 +8,9 @@
 //     });
   
 // });
+
+// This code for nav bar menus
+
 const menuLinks = document.querySelectorAll(".menu-link");
 
 menuLinks.forEach((link) => {
@@ -18,3 +21,11 @@ menuLinks.forEach((link) => {
 		link.classList.add("is-active");
 	});
 });
+// nav bar menus Code end
+
+// This function for swiper in home section
+var swiper = new Swiper(".mySwiper", {
+	effect: "cards",
+	grabCursor: true
+});
+// swiper Code end

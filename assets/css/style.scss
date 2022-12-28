@@ -18,8 +18,11 @@
     // --font-family-proxima: var('proxima');
     --header-height:3rem ;
     // defined colors
-    --color-primary: #FF9F0D;
+    --color-primary: #ff9f0d;
+    // --color-primary: #1f0f50;
+    // --color-dark-black: #03b5a6;
     --color-dark-black: #484848;
+    // 
     --color-light-black: #717171;
     --color-white: #FFFFFF;
     --color-black: #000000;
@@ -305,6 +308,91 @@ a:active {
                 }
             }
             .home-food {
+                .popular-food-item{
+                    color: var(--color-dark-black);
+                    font-family: var(--body-font-proxima);
+                    font-size: var(--h3-font-size);
+                    @media screen and (max-width: 768px) {
+                        font-size: var(--normal-font-size);
+                    }
+                    @media screen and (max-width: 568px) {
+                        font-size: var(--small-font-size);
+                    }
+                }
+                .swiper {
+                    width : 400px;
+                    height: 450px;
+                    margin: var(--m-2-5) auto;
+                    @media screen and (max-width: 768px) {
+                        width : 300px;
+                        height: 350px;
+                        margin: var(--m-1-5) auto;
+                    }
+                    @media screen and (max-width: 568px) {
+                        width : 250px;
+                        height: 300px;
+                        margin: var(--m-3) auto;
+                    }
+                    .swiper-wrapper{
+                        .swiper-slide {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 18px;
+                            font-size: 22px;
+                            font-weight: bold;
+                            color: green;
+                            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                            .swiper-img{
+                                width: 300px;
+                                height: auto;
+                                -webkit-filter: drop-shadow(5px 5px 5px #222 );
+                                filter: drop-shadow(5px 5px 5px var(--color-light-black));
+                                @media screen and (max-width: 768px) {
+                                    width : 250px;
+                                }
+                                @media screen and (max-width: 568px) {
+                                    width : 200px;
+                                }
+                            }
+                            .swiper-img-name{
+                                font-size: var(--h2-font-size);
+                                font-family: var(--body-font-futura);
+                                position: absolute;
+                                bottom: 32px;
+                                right: auto;
+                                left: auto;
+                                top: auto;
+                                @media screen and (max-width: 768px) {
+                                    font-size: var(--h3-font-size);
+                                    bottom: 24px;
+                                }
+                                @media screen and (max-width: 568px) {
+                                    font-size: var(--normal-font-size);
+                                    bottom: 16px;
+                                }
+                                @media screen and (max-width: 400px) {
+                                    bottom: 10px;
+                                }
+                            }
+                        }
+                        .swiper-slide:nth-child(odd) {
+                            background-color: var(--color-primary);
+                            color: var(--color-white);
+                        }
+
+                        .swiper-slide:nth-child(even) {
+                            background: var(--color-white);
+                            color: var(--color-primary);
+                        }
+
+                        // .swiper-slide:nth-child(1n) {
+                        //     background-color: rgb(255, 255, 255);
+                        // } 
+                    }
+                    
+                }
+                
                 .home-food-image {
                     width: 500px;
                     height: 500px;
