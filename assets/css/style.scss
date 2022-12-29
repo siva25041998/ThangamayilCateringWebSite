@@ -28,6 +28,7 @@
     --color-black: #000000;
     // defined font sizes
     // --font-size-large: 50px;
+    --large-font-size:3.8rem;
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -294,18 +295,16 @@ a:active {
                 margin: 50px 0 0 0;
             }
             .home-intro {
-                .home-price{
-                    color: var(--color-primary);
-                }
-                font-size: var(--big-font-size);
-                font-family: var(--body-font-proxima);
-                color: var(--color-dark-black);
+               
+                font-size: var(--large-font-size);
+                font-family: var(--body-font-futura);
+                color: var(--color-primary);
                 @media screen and (max-width: 768px) {
                     font-size: var(--h1-font-size);
                 }
                 @media screen and (max-width: 568px) {
-                    font-size: var(--h1-font-size);
-                }
+                    font-size: var(--h2-font-size);
+                } 
             }
             .home-food {
                 .popular-food-item{
@@ -339,9 +338,7 @@ a:active {
                             align-items: center;
                             justify-content: center;
                             border-radius: 18px;
-                            font-size: 22px;
-                            font-weight: bold;
-                            color: green;
+                            font-size: var(--normal-font-size);
                             box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
                             .swiper-img{
                                 width: 300px;
@@ -359,19 +356,16 @@ a:active {
                                 font-size: var(--h2-font-size);
                                 font-family: var(--body-font-futura);
                                 position: absolute;
-                                bottom: 32px;
-                                right: auto;
-                                left: auto;
-                                top: auto;
+                                bottom: 7px;
                                 @media screen and (max-width: 768px) {
                                     font-size: var(--h3-font-size);
-                                    bottom: 24px;
+                                    bottom: 12px;
                                 }
                                 @media screen and (max-width: 568px) {
                                     font-size: var(--normal-font-size);
                                     bottom: 16px;
                                 }
-                                @media screen and (max-width: 400px) {
+                                @media screen and (max-width: 400px) { 
                                     bottom: 10px;
                                 }
                             }
@@ -415,24 +409,51 @@ a:active {
                     }
                 }
             }
-            .home-description {
-                font-size: var(--normal-font-size);
+
+            .home-food-description{
+                font-family: var(--body-font-proxima);
+                font-size: var(--h1-font-size);
                 color: var(--color-light-black);
-                margin-bottom: var(--m-2);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--h3-font-size);
+                }
+                @media screen and (max-width: 568px) {
+                    font-size: var(--normal-font-size);
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: var(--normal-font-size);
+                }
+                .home-price{
+                    color: var(--color-primary);
+                }
+            }
+            .home-description {
+                
+                font-size: var(--h3-font-size);
+                color: var(--color-light-black);
+                margin-bottom: var(--m-3);
+                font-family: var(--body-font-proxima-regular);
+                line-height: 1.5;
+                @media screen and (max-width: 768px) {
+                    font-size: var(--normal-font-size);
+                }
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
                     margin-bottom: var(--m-1-5);
                 }
+                @media screen and (max-width: 400px) {
+                    font-size: var(--smaller-font-size);
+                }
             }
             .home-contact {
                 background-color: var(--color-primary);
-                padding: 10px 24px;
-                border-radius: var(--br-1-5);
+                padding: 16px 32px;
+                border-radius: 50px;
                 color: var(--color-white);
                 text-decoration: none;
-                margin-top: 20px;
+                // margin-top: 20px;
                 font-family: var(--body-font-futura);
-                font-size: var(--smaller-font-size);
+                font-size: var(--normal-font-size);
                 box-shadow:  4px 4px 16px rgba(0,0,0,0.2);
                 @media screen and (max-width: 568px) {
                     font-size: var(--small-font-size);
