@@ -13,6 +13,9 @@
     src: url('../fonts/ProximaNova-Regular.otf?#iefix');
 }
 
+// Import for tamil language
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
    
     --header-height:3rem ;
@@ -46,6 +49,10 @@
     // defined font families
     // --body-font-proxima: 'Minion Variable Concept';
     --body-font-proxima: 'Futura';
+
+    --body-font-bamini: 'Mukta Malar', sans-serif;
+    --body-font-weight : 800;
+
     // Futura
 
     // --body-font-proxima-regular: 'Minion Variable Concept';
@@ -59,7 +66,10 @@
     // defined font weights
     --font-normal: 400;
     --font-medium: 500;
-    --font-semi-bold: 600 //defined margins
+    --font-semi-bold: 600 ;
+    --font-bold : 800;
+    
+    //defined margins
     --m-0-25: .25rem;
     --m-0-5: .5rem;
     --m-0-75: .75rem;
@@ -98,187 +108,142 @@ a:active {
     text-decoration: none;
 }
 
-.nav-logo {
-    width: 32px;
-    height: 32px;
-}
-
-
-.header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
-	z-index: 100;
-}
-
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 4rem;
-	margin: 0 auto;
-    
-}
-
-.menu {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	display: grid;
-	align-content: center;
-	width: 100%;
-	height: 3.5rem;
-	padding: 0 1rem;
-	border-top-left-radius: 1.5rem;
-	border-top-right-radius: 1.5rem;
-	background: var(--color-white);
-	box-shadow: var(--shadow-medium);
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    @media only screen and (max-width: 767px) {
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-        bottom: 0;
-    }
-    .logo-img{
-        margin: 0 0 0 102px;
-
-        @media only screen and (max-width: 768px) {
-            margin: 0 0 0 42px ;
-        }
-        @media only screen and (max-width: 568px) {
-            margin: 0 0 0 8px;
-        }
-        @media only screen and (max-width: 360px) {
-            margin: 0 0 0 16px;
+nav{
+    height: 70px;
+    width: 100vw;
+    // background-color: #131418;
+    background-color: var(--color-white);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    .logo{
+        padding:1vh 1vw;
+        text-align: center;
+        margin: 0 0 0 6vw;
+        img {
+            width: 44px;
+            height: auto;
         }
     }
-	&-list {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-        gap: var(--space-1-rem);
-        margin: 0 102px 0 0;
-
-        @media only screen and (max-width: 768px) {
-            margin: 0 17px 0 0;
+    .nav-links{
+        display: flex;
+        list-style: none; 
+        width: 88vw;
+        padding: 0 0.7vw;
+        justify-content: space-evenly;
+        align-items: center;
+        li {
+            position: relative;
+            a{
+                text-decoration: none;
+                margin: 0 0.7vw;
+                color: var(--color-primary);
+                font-size: var(--normal-font-size);
+                font-family: var(--body-font-futura);
+            }
+            a:hover {
+                color:var(--color-primary);
+            }
+            a::before {
+                content: "";
+                display: block;
+                height: 3px;
+                width: 0%;
+                background-color: var(--color-light-black);
+                position: absolute;
+                transition: all ease-in-out 250ms;
+                margin: 0 0 0 10%;
+            }
+            a:hover::before{
+                width: 80%;
+            }
+            .join-button{
+                color: var(--color-primary);
+                background-color: var(--color-white);
+                border: 1.5px solid var(--color-primary);
+                border-radius: 2em;
+                padding: 0.6rem 0.8rem;
+                font-family: var(--body-font-futura);
+                font-size: var(--normal-font-size);
+                cursor: pointer;
+            }
+            .join-button:hover {
+                color: var(--color-white);
+                background-color: var(--color-primary);
+                // border:1.5px solid var(--color-primary);
+                transition: all ease-in-out 350ms;
+            }
         }
+    }
 
-        @media only screen and (max-width: 568px) {
-            // margin: 0 0 0 -9px;
-        }
-
-        @media only screen and (max-width: 360px) {
-            margin: 0 16px 0 0;
-        }
+    .hamburger{
+        display: none;
         
-	}
-
-	&-link {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		border: none;
-		outline: none;
-		color: var(--color-light-black);
-        text-decoration: none;
-		&.is-active {
-			position: relative;
-			color: var(--color-primary);
-			transition: all 0.35s ease;
-		}
-	}
-
-	&-icon {
-		font-size: 1.35rem;
-		line-height: 1;
-		color: inherit;
-	}
-
-	&-name {
-		display: none;
-		font-family: var(--body-font-proxima);
-		font-size: var(--normal-font-size);
-		font-weight: 500;
-		line-height: 1.25;
-		visibility: hidden;
-		text-transform: capitalize;
-	}
+        div{
+            width: 30px;
+            height:3px;
+            background: var(--color-primary);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
 }
-
-// Responsive Media Query Breakpoint
-@media only screen and (min-width: 360px) {
-	.menu {
-		&-name {
-            font-family: var(--body-font-proxima);
-			display: block;
-			visibility: visible;
-            font-size: var(--smaller-font-size);
-		}
-	}
+@media screen and (max-width: 768px){
+    nav{
+        position: fixed;
+        z-index: 3;
+        .hamburger{
+            display:block;
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 50%;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+            transition: all 0.7s ease;
+            .toggle{
+                .line1{
+                    transform: rotate(-45deg) translate(-5px,6px);
+                }
+                .line2{
+                    transition: all 0.7s ease;
+                    width:0;
+                }
+                .line3{
+                    transform: rotate(45deg) translate(-5px,-6px);
+                }
+            }
+        }
+        .nav-links{
+            position: fixed;
+            background: var(--color-white);
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            clip-path: circle(50px at 90% -20%);
+            -webkit-clip-path: circle(50px at 90% -10%);
+            transition: all 1s ease-out;
+            pointer-events: none;
+            top: -8px;
+            li{
+                opacity: 0;
+            }
+            li{
+                transition: all 0.5s ease 0.2s;
+            }
+            li.fade{
+                opacity: 1;
+            }
+        }
+        .nav-links.open{
+            clip-path: circle(1000px at 90% -10%);
+            -webkit-clip-path: circle(1000px at 90% -10%);
+            pointer-events: all;
+        }
+    }
 }
-
-@media only screen and (min-width: 576px) {
-	.menu {
-		&-list {
-			justify-content: center;
-			column-gap: 3rem;
-		}
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	.header {
-		background: var(--color-white);
-		box-shadow: var(--shadow-medium);
-		transition: all 0.35s ease-in-out;
-	}
-
-	.menu {
-		position: relative;
-		top: 0;
-		right: 0;
-		width: auto;
-		height: auto;
-		background: none;
-		box-shadow: none;
-
-		&-link {
-			&.is-active::before {
-				position: absolute;
-				content: "";
-				left: 0;
-				bottom: 0;
-				width: 2rem;
-				height: 2px;
-				border: none;
-				outline: none;
-				background: var(--color-light-black);
-			}
-
-			&:hover {
-				color: var(--color-primary);
-				transition: all 0.35s ease;
-			}
-		}
-
-		&-icon {
-			display: none;
-			visibility: hidden;
-		}
-
-		&-name {
-			font-size: var(--normal-font-size);
-            font-family: var(--body-font-proxima);
-			font-weight: 500;
-			line-height: 1.5;
-			margin-bottom: 0.2rem;
-		}
-	}
-}
-
 .container-fluid {
     .container {
         .home {
@@ -303,10 +268,27 @@ a:active {
                     margin-top:var(--m-0-5)
                 }
             }
-            .home-intro {
+            .home-intro.english {
                
                 font-size: var(--large-font-size);
                 font-family: var(--body-font-futura);
+                color: var(--color-primary);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--h1-font-size);
+                }
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h1-font-size);
+                }
+                @media screen and (max-width: 425px) {
+                    font-size: var(--big-font-size);
+                }
+                
+            }
+            .home-intro.tamil {
+               
+                font-size: var(--large-font-size);
+                font-family: var(--body-font-bamini);
+                font-weight: var(--font-bold);
                 color: var(--color-primary);
                 @media screen and (max-width: 768px) {
                     font-size: var(--h1-font-size);
@@ -468,7 +450,7 @@ a:active {
                 }
             }
 
-            .home-food-description{
+            .home-food-description.english{
                 font-family: var(--body-font-proxima);
                 font-size: var(--h1-font-size);
                 color: var(--color-light-black);
@@ -485,7 +467,25 @@ a:active {
                     color: var(--color-primary);
                 }
             }
-            .home-description {
+
+            .home-food-description.tamil{
+                font-family: var(--body-font-bamini);
+                font-size: var(--h1-font-size);
+                color: var(--color-light-black);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--h3-font-size);
+                }
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: var(--h2-font-size);
+                }
+                .home-price{
+                    color: var(--color-primary);
+                }
+            }
+            .home-description.english {
                 font-size: var(--h3-font-size);
                 color: var(--color-light-black);
                 margin-bottom: var(--m-3);
@@ -499,7 +499,22 @@ a:active {
                 }
                 
             }
-            .home-contact {
+            .home-description.tamil {
+                font-size: var(--h3-font-size);
+                color: var(--color-light-black);
+                margin-bottom: var(--m-3);
+                font-family: var(--body-font-bamini);
+                font-weight: var(--font-medium);
+                line-height: 1.5;
+                @media screen and (max-width: 768px) {
+                    font-size: var(--normal-font-size);
+                }
+                @media screen and (max-width: 568px) {
+                    margin-bottom: var(--m-1-5);
+                }
+                
+            }
+            .home-contact.english {
                 background-color: var(--color-primary);
                 padding: 16px 32px;
                 border-radius: 50px;
@@ -507,6 +522,20 @@ a:active {
                 text-decoration: none;
                 // margin-top: 20px;
                 font-family: var(--body-font-futura);
+                font-size: var(--normal-font-size);
+                box-shadow:  4px 4px 16px rgba(0,0,0,0.2);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--small-font-size);
+                }
+            }
+            .home-contact.tamil {
+                background-color: var(--color-primary);
+                padding: 16px 32px;
+                border-radius: 50px;
+                color: var(--color-white);
+                text-decoration: none;
+                // margin-top: 20px;
+                font-family: var(--body-font-bamini);
                 font-size: var(--normal-font-size);
                 box-shadow:  4px 4px 16px rgba(0,0,0,0.2);
                 @media screen and (max-width: 568px) {
@@ -544,31 +573,64 @@ a:active {
                     }
                 }
                 .summary-text {
-                    .summary-href{
+                    .summary-href.english{
                         font-size: var(--normal-font-size);
                         color: var(--color-black);
                         font-weight: var(--font-semi-bold);
                         font-family: var(--body-font-futura);
                         text-decoration: none;
                     } 
+                    .summary-href.tamil{
+                        font-size: var(--h3-font-size);
+                        color: var(--color-black);
+                        font-weight: var(--font-semi-bold);
+                        font-family: var(--body-font-bamini);
+                        text-decoration: none;
+                    }
                 }
-                .summary-description {
+                .summary-description.english {
                     font-size: var(--smaller-font-size);
                     color: var(--color-dark-black);
                     font-family: var(--body-font-proxima);
+                }
+                .summary-description.tamil {
+                    font-size: var(--smaller-font-size);
+                    color: var(--color-dark-black);
+                    font-family: var(--body-font-bamini);
                 }
             }
         }
         .about {
             margin: 100px 0 50px 0;
-            .about-name {
+            .about-name.english {
                 font-size: var(--h3-font-size);
                 font-family: var(--body-font-futura);
                 color: var(--color-light-black);
             }
-            .about-intro {
+            .about-name.tamil {
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-bamini);
+                font-weight: var(--font-medium);
+                color: var(--color-light-black);
+            }
+            .about-intro.english {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-futura);
+                color: var(--color-primary);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--h2-font-size);
+                }
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: var(--h2-font-size);
+                }
+            }
+            .about-intro.tamil {
+                font-size: var(--big-font-size);
+                font-family: var(--body-font-bamini);
+                font-weight: var(--font-semi-bold);
                 color: var(--color-primary);
                 @media screen and (max-width: 768px) {
                     font-size: var(--h2-font-size);
@@ -603,10 +665,20 @@ a:active {
                     }
                 }
             }
-            .about-description {
+            .about-description.english {
                 font-size: var(--h3-font-size);
                 color: var(--color-light-black);
                 font-family: var(--body-font-proxima-regular);
+                // margin-bottom: var(--m-2);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--normal-font-size);
+                }
+            }
+            .about-description.tamil {
+                font-size: var(--h3-font-size);
+                color: var(--color-light-black);
+                font-family: var(--body-font-bamini);
+                font-weight: var(--font-medium);
                 // margin-bottom: var(--m-2);
                 @media screen and (max-width: 768px) {
                     font-size: var(--normal-font-size);
@@ -635,7 +707,7 @@ a:active {
                 font-family: var(--body-font-futura);
                 color: var(--color-light-black);
             }
-            .service-intro {
+            .service-intro.english {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-proxima);
                 color: var(--color-primary);
@@ -643,10 +715,27 @@ a:active {
                     font-size: var(--h2-font-size);
                 }
             }
-            .service-description{
+            .service-intro.tamil {
+                font-size: var(--big-font-size);
+                font-family: var(--body-font-bamini);
+                color: var(--color-primary);
+                font-weight: var(--font-medium);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }
+            }
+            .service-description.english{
                 font-size: var(--h3-font-size);
                 color: var(--color-light-black);
                 font-family: var(--body-font-proxima-regular);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--normal-font-size);
+                }
+            }
+            .service-description.tamil{
+                font-size: var(--h3-font-size);
+                color: var(--color-light-black);
+                font-family: var(--body-font-bamini);
                 @media screen and (max-width: 768px) {
                     font-size: var(--normal-font-size);
                 }
@@ -671,9 +760,17 @@ a:active {
                     // background: -webkit-linear-gradient(top, rgba(26,96,111,0) 0%,rgba(26,96,111,0) 1%,rgba(24,87,104,0.91) 31%,rgba(21,65,89,0.91) 100%); /* Chrome10-25,Safari5.1-6 */
                     // background: linear-gradient(to bottom, rgba(26,96,111,0) 0%,rgba(26,96,111,0) 1%,rgba(24,87,104,0.91) 31%,rgba(21,65,89,0.91) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001a606f', endColorstr='#e8154159',GradientType=0 );
-                    .card-title{
+                    .card-title.english{
                         font-size: var(--h1-font-size);
                         font-family: var(--body-font-futura);
+                        color: var(--color-white);
+                        @media screen and (max-width: 768px) {
+                            font-size: var(--h2-font-size);
+                        }
+                    }
+                    .card-title.tamil{
+                        font-size: var(--h1-font-size);
+                        font-family: var(--body-font-bamini);
                         color: var(--color-white);
                         @media screen and (max-width: 768px) {
                             font-size: var(--h2-font-size);
@@ -730,194 +827,20 @@ a:active {
             }
         }
 
-        .services_test{
-            margin: 100px 0 100px 0;
-            .service-name {
-                font-size: var(--h3-font-size);
-                font-family: var(--body-font-futura);
-                color: var(--color-light-black);
-            }
-            .service-intro {
-                font-size: var(--big-font-size);
-                font-family: var(--body-font-proxima);
-                color: var(--color-primary);
-                @media screen and (max-width: 568px) {
-                    font-size: var(--h2-font-size);
-                }
-            }
-            .service-description{
-                font-size: var(--h3-font-size);
-                color: var(--color-light-black);
-                font-family: var(--body-font-proxima-regular);
-                @media screen and (max-width: 768px) {
-                    font-size: var(--normal-font-size);
-                }
-            }
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            flex-wrap: wrap;
-            z-index: 1;
-            .service-two{
-                background: url('../img/house-function.jpg');
-                background-repaeat:no-repeat;
-                background-position: center center;
-                background-size: cover;
-                position:relative;
-            }
-            .service-three {
-                background: url('../img/parties.jpg');
-                background-repaeat:no-repeat;
-                background-position: center center;
-                background-size: cover;
-                position:relative;
-            }
-            .service-four {
-                background: url('../img/meeting.jpg');
-                background-repaeat:no-repeat;
-                background-position: center center;
-                background-size: cover;
-                position:relative;
-            }
-            .service-one{
-                background: url('../img/marriage-service.svg');
-                background-repaeat:no-repeat;
-                background-position: center center;
-                background-size: cover;
-                position:relative;
-            }
-            .card{
-                .overlay {
-                    background: rgba(0,0,0,0.4);
-                    position: absolute;
-                    height: 99%;
-                    width: 100%;
-                    left: 0;
-                    top: 0;
-                    bottom: 0;
-                    right: 0;
-                    opacity: 0;
-                    -webkit-transition: all 0.4s ease-in-out 0s;
-                    -moz-transition: all 0.4s ease-in-out 0s;
-                    transition: all 0.4s ease-in-out 0s;
-                    border-radius: var(--br-1-0);
-                }
-				position: relative;
-                width: 280px;
-				height: 400px;
-				margin: 30px;
-				box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-				border-radius: 15px;
-			
-				overflow: hidden;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				border-top: 1px solid rgba(255, 255, 255, 0.5);
-				border-left: 1px solid rgba(255, 255, 255, 0.5);
-				backdrop-filter: blur(5px);
-                
-                .content{
-                    padding: 20px;
-                    text-align: center;
-                    transform: translateY(-100px);
-                    // opacity: 0;
-                    transition: 0.5s ease-in-out;
-                    h2{
-                        position: absolute;
-                        top: -80px;
-                        right: 30px;
-                        opacity: 0;
-                        font-size: var(--eight-rem);
-                        font-family: var(--body-font-futura);
-                        // color:rgba(255, 255, 255, 0.05);.
-                        color: var(--color-light-black);
-                        pointer-events: none;
-        
-                    }
-                    h3{
-                        font-size: var(--h1-font-size);
-                        font-family: var(--body-font-proxima);
-                        // color: #fff;
-                        // opacity: 1;
-                        transform: translateY(30px);
-                        color: var(--color-light-black);
-                        // color: var(--color-white);
-                        z-index: 1;
-                        @media only screen and (max-width: 568px) {
-                            font-size: var(--h2-font-size);
-                        }
-                    }
-                    p{
-                        font-size: var(--normal-font-size);
-                        // color: #fff;
-                        padding-top: 46px;
-                        opacity: 0;
-                        color: var(--color-white);
-                        font-style: var(--body-font-proxima-regular);
-                        font-weight: 300;
-                    }
-                    a{
-                        position: relative;
-                        display: inline-block;
-                        // margin-top: 16px;
-                        // margin-bottom: 16px;
-                        padding: 8px 20px;
-                        background: #fff;
-                        color:var(--color-black);
-                        opacity: 0;
-                        border-radius: 20px;
-                        text-decoration: none;
-                        font-weight: 500;
-                        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-                    }
-                }
-                .content::nth-child(1n) {
-                    // background-color: rgb(255, 255, 255);
-                    background-image: url('../img/marriage-service.svg');
-                }
-			}
-            .card:hover {
-                .overlay{
-                    opacity: 1;
-                }
-                .content{
-                    transform: translateY(0px);
-                    opacity: 1;
-                    transition: 1000ms ease-in-out;
-                    h2{
-                        opacity: 0.5;
-                        transition: 1000ms ease-in-out;
-                        
-                    }
-                    h3{
-                        opacity: 1;
-                        color: var(--color-primary);
-                        transition: 1000ms ease-in-out;
-                    }
-                    p{
-                        opacity: 1;
-                        transition: 1000ms ease-in-out;
-                    }
-                    a{
-                        opacity: 1;
-                        transition: 1000ms ease-in-out;
-                    }
-                }
-			}
-        }
-
         .menus{
             
             margin-bottom: var(--m-3);
-            .menu-list-name {
+            .menu-list-name.english {
                 font-size: var(--h3-font-size);
                 font-family: var(--body-font-futura);
                 color: var(--color-black);
             }
-            .menu-list-intro {
+            .menu-list-name.tamil {
+                font-size: var(--h3-font-size);
+                font-family: var(--body-font-bamini);
+                color: var(--color-black);
+            }
+            .menu-list-intro.english {
                 font-size: var(--big-font-size);
                 font-family: var(--body-font-proxima);
                 color: var(--color-primary);
@@ -925,10 +848,27 @@ a:active {
                     font-size: var(--h2-font-size);
                 }   
             }
-            .menu-list-description {
+            .menu-list-intro.tamil {
+                font-size: var(--big-font-size);
+                font-family: var(--body-font-bamini);
+                color: var(--color-primary);
+                font-weight: var(--font-medium);
+                @media screen and (max-width: 568px) {
+                    font-size: var(--h2-font-size);
+                }   
+            }
+            .menu-list-description.english {
                 font-size: var(--h3-font-size);
                 color: var(--color-light-black);
                 font-family: var(--body-font-proxima-regular);
+                @media screen and (max-width: 768px) {
+                    font-size: var(--normal-font-size);
+                }   
+            }
+            .menu-list-description.tamil {
+                font-size: var(--h3-font-size);
+                color: var(--color-light-black);
+                font-family: var(--body-font-bamini);
                 @media screen and (max-width: 768px) {
                     font-size: var(--normal-font-size);
                 }   
@@ -976,7 +916,7 @@ a:active {
                     box-shadow:  4px 4px 16px rgba(0,0,0,0.1);
                     .accordion-header{
                         .accordion-button{
-                            .food-items-title{
+                            .food-items-title.english{
                                 color: var(--color-primary);
                                 font-family: var(--body-font-proxima);
                                 font-size: var(--h1-font-size);
@@ -987,9 +927,29 @@ a:active {
                                 //     font-size: var(--normal-font-size);
                                 // }
                             }
-                            .food-items-description{
+                            .food-items-title.tamil{
+                                color: var(--color-primary);
+                                font-family: var(--body-font-bamini);
+                                font-weight: var(--font-semi-bold);
+                                font-size: var(--h1-font-size);
+                                @media screen and (max-width: 768px) {
+                                    font-size: var(--h2-font-size);
+                                }
+                                // @media screen and (max-width: 768px) {
+                                //     font-size: var(--normal-font-size);
+                                // }
+                            }
+                            .food-items-description.english{
                                 color: var(--color-light-black);
                                 font-family: var(--body-font-proxima-regular);
+                                font-size: var(--h3-font-size);
+                                @media screen and (max-width: 768px) {
+                                    font-size: var(--normal-font-size);
+                                }
+                            }
+                            .food-items-description.tamil{
+                                color: var(--color-light-black);
+                                font-family: var(--body-font-bamini);
                                 font-size: var(--h3-font-size);
                                 @media screen and (max-width: 768px) {
                                     font-size: var(--normal-font-size);
@@ -1196,10 +1156,32 @@ a:active {
                 }
             }
             .card-body{
-                .card-title{
+                .card-title.english{
                     font-size: var(--h1-font-size);
                     color: var(--color-primary);
                     // border-bottom: 1px solid var(--color-black);
+                    font-family: var(--body-font-futura);
+                    padding: 0 0 var(--m-0-75) 0;
+                    @media screen and (max-width: 768px) {
+                        font-size: var(--h2-font-size);
+                        // font-size: var(--sub-title-font-size);
+                        // margin: 0 0 0 -1px;
+                    }
+                    @media screen and (min-width: 569px) {
+                        font-size: var(--h2-font-size);
+                        // font-size: var(--sub-title-font-size);
+                        // margin: 0 0 0 -1px;
+                    }
+                    @media screen and (max-width: 400px) {
+                        font-size: var(--normal-font-size);
+                        // margin: 0 0 0 54px;
+                    }
+                }
+                .card-title.tamil{
+                    font-size: var(--h1-font-size);
+                    color: var(--color-primary);
+                    // border-bottom: 1px solid var(--color-black);
+                    font-family: var(--body-font-bamini);
                     padding: 0 0 var(--m-0-75) 0;
                     @media screen and (max-width: 768px) {
                         font-size: var(--h2-font-size);
@@ -1309,7 +1291,7 @@ a:active {
                         }
                     }
                     .footer-text {
-                        p {
+                        .footer_description {
                             margin-bottom: 14px;
                             font-size: 14px;
                             color: var(--color-light-black);
@@ -1351,7 +1333,24 @@ a:active {
                     }
                     .footer-widget{
                         .footer-widget-heading{
-                            h3 {
+                            .footer_title.english {
+                                color: var(--color-primary);
+                                font-size: var(--h2-font-size);
+                                font-weight: 600;
+                                margin-bottom: 40px;
+                                font-family: var(--body-font-proxima);
+                                position: relative;
+                                ::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -15px;
+                                    height: 2px;
+                                    width: 50px;
+                                    background: #ff5e14;
+                                }
+                            }
+                            .footer_title.tamil {
                                 color: var(--color-primary);
                                 font-size: var(--h2-font-size);
                                 font-weight: 600;

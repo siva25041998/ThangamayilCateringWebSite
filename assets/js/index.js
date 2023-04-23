@@ -21,6 +21,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // Menu List Tabs Jquery
 $(document).ready(function(){
+	$('.tamil').hide()
 // class="nav-link active" data-toggle="tab"
 	$('.nav-link[data-food^="veg"]').click(function(){
 	
@@ -64,5 +65,45 @@ $(document).ready(function(){
 		$('.tab-pane[id^="'+refEelement+'"]').addClass('active');
 
 	}
+
+	/*-------------------- Switch Font family ------------------------- */
+	$('#switch_lang').click(function(){
+
+		if($(this).val() == 1){
+			$('.tamil').hide()
+			$('.english').show()
+			$('.switch_name').text('Tamil')
+			$(this).val("0")
+		}else{
+			$('.tamil').show()
+			$('.english').hide()
+			$(this).val("1")
+			$('.switch_name').text('English')
+		}
+	});
+
+	// Menu bar JQuery
+	const hamburger = document.querySelector(".hamburger");
+	const navLinks = document.querySelector(".nav-links");
+	const links = document.querySelectorAll(".nav-links li");
+
+	hamburger.addEventListener('click', ()=>{
+		//Animate Links
+		navLinks.classList.toggle("open");
+		links.forEach(link => {
+			link.classList.toggle("fade");
+		});
+
+		//Hamburger Animation
+		hamburger.classList.toggle("toggle");
+	});
+
+	$('.mobile_menu').click(function(){
+		if($('.mobile_menu').hasClass('fade')){
+			$('.mobile_menu').removeClass('fade');
+			$('.nav-links').removeClass('open');
+			$('.hamburger').removeClass('toggle');
+		}
+	});
 	
 });
